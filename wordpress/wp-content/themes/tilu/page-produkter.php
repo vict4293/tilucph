@@ -12,6 +12,7 @@
 get_header();
 ?>
 
+
 	<template>
 		<article class="produkt">
 			<img src="" alt="" class="billede">
@@ -21,70 +22,83 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-
+			<nav id="filtrering">
+				<button data-genre="alle">Alle</button>
+			</nav>
 
 			<section id="produkt-oversigt"></section>
-
-
-			<script>
-				let produkter = [];
-				let filterProdukt = "alle";
-
-				const oversigt = document.querySelector("#produkt-oversigt");
-				const skabelon = document.querySelector("template");
-
-				//Henter data gennem WP rest API url med fetch funktion//
-				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
-				const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
-
-
-				//Når alt content på siden er loaded sætter vi functionen start igang og henter json//
-				document.addEventListener("DOMContentLoaded", start);
-
-				function start() {
-					getJson();
-				}
-
-
-				async function getJson() {
-					const data = await fetch(url);
-					const catdata = await fetch(caturl);
-					produkter = await data.json();
-					categories = await catdata.json();
-					console.log(categories);
-					visProdukter();
-					opretKnapper();
-				}
-
-				function opretKnapper() {
-					categories.forEach(cat => {
-						document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`
-
-					})
-
-					addEventListenersToButtons();
-
-				}
-
-
-				//Viser produkterne gennem et forEach loop//
-				function visProdukter() {
-					let temp = document.querySelector("template");
-					let container = document.querySelector("#produkt-oversigt");
-					console.log(produkter);
-					produkter.forEach(produkt => {
-						let klon = temp.cloneNode(true).content;
-						klon.querySelector(".titel").textContent = produkt.title.rendered;
-						klon.querySelector(".billede").src = produkt.billede.guid;
-						container.appendChild(klon);
-					})
-				}
-
-			</script>
 		</main>
 		<!-- #main -->
 	</div>
 	<!-- #primary -->
 
+
+	<script>
+		let produkter = [];
+		let filterProdukt = "alle";
+		let categories;
+
+		//Henter data gennem WP rest API url med fetch funktion//
+		const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
+		const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
+
+
+		//Når alt content på siden er loaded sætter vi functionen start igang og henter json//
+		document.addEventListener("DOMContentLoaded", start);
+
+		function start() {
+			getJson();
+		}
+
+		async function getJson() {
+			const data = await fetch(url);
+			const catdata = await fetch(caturl);
+			produkter = await data.json();
+			categories = await catdata.json();
+			console.log(categories);
+			visProdukter();
+			opretKnapper();
+		}
+
+		function opretKnapper() {
+			categories.forEach(cat => {
+				document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`
+
+			})
+			addEventListenersToButtons();
+		}
+
+		function addEventListenersToButtons() {
+			document.querySelectorAll("#filtrering button").forEach(elm => {
+				elm.addEventListener("click", filtrering);
+			})
+		};
+
+
+		function filtrering() {
+			filterProdukt = this.dataset.kategori;
+			visProdukter();
+		}
+
+		//Viser produkterne gennem et forEach loop//
+		function visProdukter() {
+			let temp = document.querySelector("template");
+			let container = document.querySelector("#produkt-oversigt");
+			container.innerHTML = "";
+			produkter.forEach(produkt => {
+				if (produkt.categories.includes(parseInt(filterProdukt))) {
+					let klon = temp.cloneNode(true).content;
+					klon.querySelector(".titel").textContent = produkt.title.rendered;
+					klon.querySelector(".billede").src = produkt.billede.guid;
+					klon.querySelector("article").addEventListener("click", () => {
+						location.href = produkt.link;
+					}) container.appendChild(klon);
+				}
+			})
+		}
+
+		getJson();
+
+	</script>
 	<?php
 get_footer();
