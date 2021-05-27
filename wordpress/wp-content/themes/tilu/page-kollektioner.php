@@ -42,8 +42,14 @@ get_header();
 				}
 
 				async function getJson() {
-					const data = await fetch(url); const catdata = await fetch(caturl); kollektioner = await data.json(); categories = await catdata.json(); console.log(categories); visKollektioner();
+					const data = await fetch(url);
+					const catdata = await fetch(caturl);
+					kollektioner = await data.json();
+					categories = await catdata.json();
+					console.log(categories);
+					visKollektioner();
 				}
+
 				//Viser kollektionerne gennem et forEach loop//
 				function visKollektioner() {
 					console.log(kollektioner);
