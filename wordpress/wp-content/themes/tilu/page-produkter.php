@@ -53,7 +53,19 @@ get_header();
 					categories = await catdata.json();
 					console.log(categories);
 					visProdukter();
+					opretKnapper();
 				}
+
+				function opretKnapper() {
+					categories.forEach(cat => {
+						document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`
+
+					})
+
+					addEventListenersToButtons();
+
+				}
+
 
 				//Viser produkterne gennem et forEach loop//
 				function visProdukter() {
