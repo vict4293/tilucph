@@ -25,10 +25,10 @@ p {
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
 }
-#footer-wrapper col1 {
+#footer-wrapper .col1 {
 	text-align: left;
 }
-#footer-wrapper col2 {
+#footer-wrapper .col2 {
 	text-align: right;
 }
 #footer-wrapper form {
