@@ -19,26 +19,22 @@
 	<footer id="colophon" class="site-footer">
 
 
+		<div id="footer-wrapper">
+			<div class="col">
+				<form>
+					<h3>TILMELD NYHEDSBREVE</h3>
+					<p>Hold dig opdateret på det nyeste</p>
+					<label for="email">E-mail</label>
+					<input id="email" name="email" type="email">
+					<button>Tilmeld</button>
+				</form>
+			</div>
 
-		<form>
-			<label for="email">TILMELD DIG</label>
-			<input id="email" name="email" type="email">
-			<button>INDSEND</button>
-		</form>
-
-		<div class="col">
-			<h3>KONTAKT</h3>
-			<p>kontakt@radioloud.dk
-				<br> +45 32 42 17 14
-				<br>
-				<br> <b> Programredaktion</b>
-				<br>Wildersgade 10B, 2. sal
-				<br>1408 København
-				<br>
-				<br> <b> Nyhedsredaktion</b>
-				<br>Vestergade 165D, 2. sal
-				<br>5700 Svendborg
-			</p>
+			<div class="col">
+				<a href="https://www.instagram.com/tilucph/?hl=da">@tilucph</a>
+				<br> <a href="mailto:Info@tilucph.dk">Info@tilucph.dk</a>
+				<br> <a href="tel:+4528441900">+45 28 44 19 00</a>
+			</div>
 		</div>
 
 	</footer>
