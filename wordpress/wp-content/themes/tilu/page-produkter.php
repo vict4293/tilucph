@@ -69,11 +69,14 @@ get_header();
 
 				//Viser produkterne gennem et forEach loop//
 				function visProdukter() {
+					let temp = document.querySelector("#template");
+					let container = document.querySelector("#produkt-oversigt");
 					console.log(produkter);
 					produkter.forEach(produkt => {
-						const klon = skabelon.cloneNode(true).content;
+						let klon = temp.cloneNode(true).content;
 						klon.querySelector(".titel").textContent = produkt.title.rendered;
 						klon.querySelector(".billede").src = produkt.billede.guid;
+						container.appendChild(klon);
 					})
 				}
 
