@@ -24,6 +24,7 @@ p {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
+	margin: 2vw 2vw 2vw 2vw;
 }
 #footer-wrapper .col1 {
 	text-align: left;
@@ -34,7 +35,6 @@ p {
 #footer-wrapper form {
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
 	overflow: hidden;
 }
 #footer-wrapper label {
@@ -42,12 +42,10 @@ p {
 	text-align: left;
 }
 #footer-wrapper button {
-	border: 2px solid white;
-	background-color: black;
-	font-family: urbane, sans-serif;
+	border: 1px solid black;
+	background-color: white;
+	font-family: ivypresto display, serif;
 	font-weight: 400;
-	font-style: normal;
-	color: white;
 	cursor: pointer;
 	font-size: 15px;
 	padding: 5px 10px 5px 10px;
