@@ -67,11 +67,12 @@ get_header();
 			function visKollektioner() {
 				console.log(kollektioner);
 				kollektioner.forEach(kollektion => {
+					if (filterProdukt == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
 					const klon = skabelon.cloneNode(true).content;
 					klon.querySelector(".titel").textContent = kollektion.title.rendered;
 					klon.querySelector(".billede").src = kollektion.billede.guid;
 				})
-			}
+			)}
 
 		</script>
 
