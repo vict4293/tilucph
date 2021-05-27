@@ -25,9 +25,14 @@ get_header();
 			<section id="kollektion-oversigt"></section>
 			<script>
 				let kollektioner = [];
+				let categories;
+
 				const oversigt = document.querySelector("#kollektion-oversigt");
 				const skabelon = document.querySelector("template");
-				let filterKollektion = "alle";
+
+				//Henter data gennem WP rest API url med fetch funktion/
+				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/kollektion?per_page=100";
+				const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
 
 				//Når alt content på siden er loaded sætter vi functionen start igang og henter json//
 				document.addEventListener("DOMContentLoaded", start);
@@ -36,15 +41,9 @@ get_header();
 					getJson();
 				}
 
-				//Henter data gennem WP rest API url med fetch funktion//
-				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/kollektion?per_page=100";
-
 				async function getJson() {
-					let response = await fetch(url);
-					kollektioner = await response.json();
-					visKollektioner();
+					const data = await fetch(url); const catdata = await fetch(caturl); kollektioner = await data.json(); categories = await catdata.json(); console.log(categories); visKollektioner();
 				}
-
 				//Viser kollektionerne gennem et forEach loop//
 				function visKollektioner() {
 					console.log(kollektioner);
