@@ -18,20 +18,25 @@ h3 {
 }
 p {
 	font-family: acumin, sans-serif;
-	font-size: 2vw;
 }
 #footer-wrapper {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin: 2vw 2vw 2vw 2vw;
+	margin: 2vw 4vw 2vw 4vw;
 }
 #footer-wrapper .col1 {
 	text-align: left;
 }
-#footer-wrapper .col2 {
-	text-align: right;
-	margin: 1rem 0;
+#footer-wrapper h3 {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+#footer-wrapper p {
+	font-size: 0.8rem;
+	margin-top: 0;
+	font-style: italic;
 }
 #footer-wrapper form {
 	margin-left: auto;
@@ -41,7 +46,9 @@ p {
 #footer-wrapper label {
 	font-family: acumin, sans-serif;
 	text-align: left;
-	font-size: 1.5vw;
+	font-size: 0.7rem;
+	display: block;
+	margin-bottom: -2.5rem;
 }
 #footer-wrapper button {
 	border: 1px solid black;
@@ -54,17 +61,26 @@ p {
 	width: 100px;
 }
 #footer-wrapper input {
-	width: 40%;
-	height: 30px;
-	border: 1px solid white;
-	display: inline;
+	border-bottom: 1px solid black;
+	width: 60%;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: transparent;
+}
+#footer-wrapper .col2 {
+	text-align: right;
+	margin: 1rem 0;
 }
 #footer-wrapper a:link {
 	color: black;
+	font-size: 0.8rem;
 }
 #footer-wrapper a:visited {
 	color: #1100D8;
+	font-size: 0.8rem;
 }
 #footer-wrapper a:hover {
 	color: #E3F10C;
+	font-size: 0.8rem;
 }
