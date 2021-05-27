@@ -69,7 +69,7 @@ get_header();
 
 				//Viser produkterne gennem et forEach loop//
 				function visProdukter() {
-					let temp = document.querySelector("#template");
+					let temp = document.querySelector("template");
 					let container = document.querySelector("#produkt-oversigt");
 					console.log(produkter);
 					produkter.forEach(produkt => {
