@@ -12,22 +12,19 @@
 get_header();
 ?>
 
+	<template>
+		<article class="produkt">
+			<img src="" alt="" class="billede">
+			<h2 class="titel"></h2>
+		</article>
+	</template>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<nav id="filtrering">
-				<button data-genre="alle">Vis alle</button>
-			</nav>
+
 
 			<section id="produkt-oversigt"></section>
 
-
-			<template>
-				<article>
-					<img src="" alt="" class="billede">
-					<p class="titel"></p>
-				</article>
-			</template>
 
 			<script>
 				let produkter = [];
@@ -43,7 +40,7 @@ get_header();
 				}
 
 				//Henter data gennem WP rest API url med fetch funktion//
-				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkter?per_page=100";
+				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
 
 				async function getJson() {
 					let response = await fetch(url);

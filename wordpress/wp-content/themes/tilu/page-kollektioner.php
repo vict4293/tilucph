@@ -22,80 +22,37 @@ get_header();
 
 
 
-			<section id="kollektion-container"></section>
-
-
+			<section id="kollektion-oversigt"></section>
 			<script>
 				let kollektioner = [];
-				let categories;
-				let filterKollektioner = "alle";
-
+				const oversigt = document.querySelector("#kollektion-oversigt");
 				const skabelon = document.querySelector("template");
-				const alleKollek = document.querySelector("#kollektion-oversigt");
-				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/kollektioner?per_page=100";
-				const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
+				let filterKollektion = "alle";
 
-
-				document.addEventListener("DOMContentLoaded", start)
+				//Når alt content på siden er loaded sætter vi functionen start igang og henter json//
+				document.addEventListener("DOMContentLoaded", start);
 
 				function start() {
-					console.log("start");
 					getJson();
 				}
 
+				//Henter data gennem WP rest API url med fetch funktion//
+				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/kollektion?per_page=100";
+
 				async function getJson() {
-					const data = await fetch(url);
-					const catdata = await fetch(caturl);
-					kollektioner = await data.json();
-					categories = await catdata.json();
-
-					console.log(categories);
+					let response = await fetch(url);
+					kollektioner = await response.json();
 					visKollektioner();
-					opretknapper();
 				}
 
-				function opretknapper() {
-
-					categories.forEach(cat => {
-						document.querySelector("#filtrering").innerHTML += `<button class="filter" data-genre="${cat.id}">${cat.name}</button>`
-
+				//Viser kollektionerne gennem et forEach loop//
+				function visKollektioner() {
+					console.log(kollektioner);
+					kollektioner.forEach(kollektion => {
+						const klon = skabelon.cloneNode(true).content;
+						klon.querySelector(".titel").textContent = kollektion.title.rendered;
+						klon.querySelector(".billede").src = kollektion.billede.guid;
 					})
-
-					addEventListenersToButtons();
-				}
-
-				function addEventListenersToButtons() {
-					document.querySelectorAll("#filtrering button").forEach(elm => {
-						elm.addEventListener("click", filtrering);
-					})
-					console.log("clickknap");
-				};
-
-				function filtrering() {
-					filterPodcast = this.dataset.genre;
-					console.log(filterPodcast);
-					visPodcasts();
-				}
-
-
-
-
-				function visPodcasts() {
-					console.log("visPodcasts");
-					allePods.innerHTML = "";
-					podcasts.forEach(podcast => {
-							if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
-								let klon = skabelon.cloneNode(true).content;
-								console.log(klon);
-								klon.querySelector(".container img").src = podcast.billede.guid;
-								klon.querySelector("h3").textContent = podcast.title.rendered;
-								klon.querySelector("article").addEventListener("click", () => {
-									location.href = podcast.link;
-								})
-								allePods.appendChild(klon);
-							}
-						} //tuborg fra if sætning lukke
-					)
 				}
 
 			</script>
