@@ -43,7 +43,7 @@ get_header();
 				}
 
 				//Henter data gennem WP rest API url med fetch funktion//
-				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/podcast?per_page=100";
+				const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkter?per_page=100";
 
 				async function getJson() {
 					let response = await fetch(url);
