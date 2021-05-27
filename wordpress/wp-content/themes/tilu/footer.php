@@ -20,7 +20,7 @@
 
 
 		<div id="footer-wrapper">
-			<div class="col">
+			<div class="col1">
 				<form>
 					<h3>TILMELD NYHEDSBREVE</h3>
 					<p>Hold dig opdateret på det nyeste</p>
@@ -30,7 +30,7 @@
 				</form>
 			</div>
 
-			<div class="col">
+			<div class="col2">
 				<a href="https://www.instagram.com/tilucph/?hl=da">@tilucph</a>
 				<br> <a href="mailto:Info@tilucph.dk">Info@tilucph.dk</a>
 				<br> <a href="tel:+4528441900">+45 28 44 19 00</a>
