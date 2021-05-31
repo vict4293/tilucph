@@ -34,12 +34,12 @@ get_header();
 
 
 	<script>
-		let produkter = [];
-		let filterProdukt = "alle";
+		let produkter;
 		let categories;
+		let filterProdukt = "alle";
 
 		//Henter data gennem WP rest API url med fetch funktion//
-		const url = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
+		const dburl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
 		const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
 
 
@@ -51,7 +51,7 @@ get_header();
 		}
 
 		async function getJson() {
-			const data = await fetch(url);
+			const data = await fetch(dburl);
 			const catdata = await fetch(caturl);
 			produkter = await data.json();
 			categories = await catdata.json();
@@ -62,9 +62,10 @@ get_header();
 
 		function opretKnapper() {
 			categories.forEach(cat => {
-				document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`
+				document.querySelector("#filtrering").innerHTML += `<button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
 
 			})
+
 			addEventListenersToButtons();
 		}
 
@@ -74,9 +75,8 @@ get_header();
 			})
 		};
 
-
 		function filtrering() {
-			filterProdukt = this.dataset.kategori;
+			filterProdukt = this.dataset.produkt;
 			visProdukter();
 		}
 
@@ -86,13 +86,17 @@ get_header();
 			let container = document.querySelector("#produkt-oversigt");
 			container.innerHTML = "";
 			produkter.forEach(produkt => {
-				if (produkt.categories.includes(parseInt(filterProdukt))) {
+				if (filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
 					let klon = temp.cloneNode(true).content;
+
 					klon.querySelector(".titel").textContent = produkt.title.rendered;
+
 					klon.querySelector(".billede").src = produkt.billede.guid;
+
 					klon.querySelector("article").addEventListener("click", () => {
 						location.href = produkt.link;
-					}) container.appendChild(klon);
+					})
+					container.appendChild(klon);
 				}
 			})
 		}

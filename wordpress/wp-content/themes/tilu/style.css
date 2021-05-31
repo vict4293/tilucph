@@ -2,7 +2,7 @@
 Theme name: TILU
 Template: twentynineteen
 Author: Victoria Løkke
-Version: 1.0.1
+Version: 1.0.6
 Description: Stylish Child Theme based on Twenty Nineteen
 */
 
@@ -19,11 +19,53 @@ h3 {
 p {
 	font-family: acumin, sans-serif;
 }
+#page {
+	background-image: url(baggrund.jpg);
+}
+.site-branding {
+	margin: 4vw;
+	;
+}
+#masthead {
+	padding: 0;
+}
+.menu-main-container {
+	font-family: ivypresto display, serif;
+	font-size: 1rem;
+}
+.site-branding {
+	text-align: center;
+}
+#menu-item-18 > a:nth-child(1) {
+	color: black;
+	font-weight: 400;
+}
+#menu-item-32 > a:nth-child(1) {
+	color: black;
+	font-weight: 400;
+	margin-right: 4.5rem;
+}
+#menu-item-26 > a:nth-child(1) {
+	color: black;
+	font-weight: 400;
+}
+#menu-item-70 > a:nth-child(1) {
+	display: none;
+}
+button.submenu-expand:nth-child(2) > svg:nth-child(1) {
+	color: black;
+	font-weight: 400;
+	margin-right: 4.5rem;
+}
+.entry-header {
+	display: none;
+}
 #footer-wrapper {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin: 2vw 4vw 2vw 4vw;
+	padding: 2vw 4vw 2vw 4vw;
+	background-color: white;
 }
 #footer-wrapper .col1 {
 	text-align: left;
@@ -70,7 +112,7 @@ p {
 }
 #footer-wrapper .col2 {
 	text-align: right;
-	margin: 1rem 0;
+	margin: 0.8rem 0;
 }
 #footer-wrapper a:link {
 	color: black;
