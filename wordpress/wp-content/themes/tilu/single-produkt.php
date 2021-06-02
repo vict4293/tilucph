@@ -21,13 +21,40 @@ get_header();
 	<!-- #primary -->
 
 
+
 	<article class="indhold">
-		<img src="" alt="" class="billede">
-		<h1 class="titel"></h1>
-		<p class="beskrivelse"></p>
+
+
+
+		<div class="col1">
+			<h1 class="titel"></h1>
+			<div class="box">
+				<p class="pris"></p>
+			</div>
+			<div class="box">
+				<p class="storrelse"></p>
+			</div>
+			<div class="box">
+				<p class="type"></p>
+			</div>
+
+
+			<button class="tilbage"><img src="tilbage.png" alt=""></button>
+			<button class="tilfoj"><img src="tilfoj.png" alt=""></button>
+		</div>
+
+		<div class="col">
+			<img src="" alt="" class="billede">
+		</div>
+
 
 		<button id="knap">Tilbage</button>
 	</article>
+
+
+
+
+
 	<section id="meresom">
 
 		<template id="fleretemp">
