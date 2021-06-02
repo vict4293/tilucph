@@ -110,8 +110,6 @@ get_header();
         })
     }
 
-    getJson();
-
 </script>
 <?php
 get_footer();
