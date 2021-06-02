@@ -37,7 +37,7 @@ get_header();
 		let filterKollektion = "alle";
 
 		//Henter data gennem WP rest API url med fetch funktion//
-		const dburl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/kollektion?per_page=100";
+		const dburl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
 		const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
 
 
@@ -83,7 +83,7 @@ get_header();
 			let temp = document.querySelector("template");
 			let container = document.querySelector("#kollektion-oversigt");
 			container.innerHTML = "";
-			kollektioner.forEach(kollektion => {
+			kollektion.forEach(kollektion => {
 				if (kollektion.categories.includes(parseInt(filterKollektion))) {
 					let klon = temp.cloneNode(true).content;
 
