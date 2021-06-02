@@ -86,12 +86,12 @@ get_header();
 			let container = document.querySelector("#produkt-oversigt");
 			container.innerHTML = "";
 			produkter.forEach(produkt => {
-				if (filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
+				if (produkt.categories.includes(parseInt(filterProdukt))) {
 					let klon = temp.cloneNode(true).content;
 
 					klon.querySelector(".titel").textContent = produkt.title.rendered;
 
-					klon.querySelector(".billede").src = produkt.billede.guid;
+					klon.querySelector("img").src = produkt.billede.guid;
 
 					klon.querySelector("article").addEventListener("click", () => {
 						location.href = produkt.link;

@@ -2,29 +2,36 @@
 Theme name: TILU
 Template: twentynineteen
 Author: Victoria Løkke
-Version: 1.0.6
+Version: 1.1.0
 Description: Stylish Child Theme based on Twenty Nineteen
 */
 
 @import url("https://use.typekit.net/yba0nnh.css");
-h1 {
-	font-family: ivypresto display, serif;
-}
-h2 {
-	font-family: ivypresto display, serif;
-}
+h1,
+h2,
 h3 {
 	font-family: ivypresto display, serif;
 }
 p {
 	font-family: acumin, sans-serif;
+	font-size: 0.8rem;
 }
+h2::before {
+	display: none;
+}
+.site-logo {
+	top: -20px;
+	left: 0;
+}
+
+/*
 #page {
 	background-image: url(baggrund.jpg);
 }
+*/
+
 .site-branding {
 	margin: 4vw;
-	;
 }
 #masthead {
 	padding: 0;
@@ -33,21 +40,30 @@ p {
 	font-family: ivypresto display, serif;
 	font-size: 1rem;
 }
+.entry-content,
+.entry .entry-content,
+.entry .entry-summary {
+	padding: 0;
+	margin-top: 5rem;
+}
 .site-branding {
 	text-align: center;
 }
 #menu-item-18 > a:nth-child(1) {
 	color: black;
 	font-weight: 400;
+	font-size: 1.3rem;
 }
 #menu-item-32 > a:nth-child(1) {
 	color: black;
 	font-weight: 400;
 	margin-right: 4.5rem;
+	font-size: 1.3rem;
 }
 #menu-item-26 > a:nth-child(1) {
 	color: black;
 	font-weight: 400;
+	font-size: 1.3rem;
 }
 #menu-item-70 > a:nth-child(1) {
 	display: none;
@@ -56,6 +72,7 @@ button.submenu-expand:nth-child(2) > svg:nth-child(1) {
 	color: black;
 	font-weight: 400;
 	margin-right: 4.5rem;
+	font-size: 1.3rem;
 }
 .entry-header {
 	display: none;

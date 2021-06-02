@@ -20,7 +20,9 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<nav id="filtrering"></nav>
+			<nav id="filtrering">
+			<button data-produkt="alle">Alle</button>
+			</nav>
 
 			<section id="kollektion-oversigt"></section>
 		</main>
