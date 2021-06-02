@@ -16,9 +16,6 @@ get_header();
 		<main id="main" class="site-main">
 			<section id="singleProdukt">
 				<article class="indhold">
-
-
-
 					<div class="col1">
 						<h1 class="titel"></h1>
 						<div class="box">
@@ -30,18 +27,13 @@ get_header();
 						<div class="box">
 							<p class="type"></p>
 						</div>
-
-
-						<button class="tilbage"><img src="tilbage.png" alt=""></button>
-						<button class="tilfoj"><img src="tilfoj.png" alt=""></button>
+						<button class="tilbage"><img src="http://victorialoekke.dk/kea/tilbage.png" alt=""></button>
+						<button class="tilfoj"><img src="http://victorialoekke.dk/kea/tilfoj.png" alt=""></button>
 					</div>
-
 					<div class="col">
 						<img src="" alt="" class="billede">
 					</div>
 
-
-					<button id="knap">Tilbage</button>
 				</article>
 			</section>
 		</main>
