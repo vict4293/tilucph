@@ -45,6 +45,7 @@ get_header();
     document.addEventListener("DOMContentLoaded", start);
 
     function start() {
+        console.log("get json");
         getJson();
     }
 
@@ -58,6 +59,9 @@ get_header();
         opretKnapper();
     }
 
+
+
+
     function opretKnapper() {
         categories.forEach(cat => {
             if (cat.id >= 11 && cat.id <= 15) {
@@ -65,8 +69,21 @@ get_header();
             }
         })
 
+
         addEventListenersToButtons();
     }
+
+//    let catName;
+  //
+  // function simpleBillede() {
+  // console.log("simpleBillede");
+  // catName = "simple";
+  // var simple = document.createElement("IMG");
+  // simple.setAttribute("src", "img_pulpit.jpg");
+  // }
+  // catName = "nordisk";
+  // catName = "minimalistisk";
+  // catName = "blomster";
 
     function addEventListenersToButtons() {
         document.querySelectorAll("#filtrering button").forEach(elm => {

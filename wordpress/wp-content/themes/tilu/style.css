@@ -205,14 +205,16 @@ button.filter {
     cursor: pointer;
     width: 7rem;
     border-radius: 0;
+    letter-spacing: 3px;
 }
 
 #filtrering {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 0.4rem;
     padding: 0px 25vw 6vw 25vw;
+
 
 }
 
