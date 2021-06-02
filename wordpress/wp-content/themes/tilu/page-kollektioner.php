@@ -20,7 +20,7 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-        <nav id="filtrering">
+        <nav id="filtrering" class="filtering_kollektion">
             <button data-genre="alle">Alle</button>
         </nav>
 
@@ -38,7 +38,7 @@ get_header();
 
     //Henter data gennem WP rest API url med fetch funktion//
     const dburl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
-    const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories";
+    const caturl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/categories?per_page=100";
 
 
     //Når alt content på siden er loaded sætter vi functionen start igang og henter json//
@@ -60,8 +60,9 @@ get_header();
 
     function opretKnapper() {
         categories.forEach(cat => {
-            document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kollektion="${cat.id}">${cat.name}</button>`
-
+            if (cat.id >= 11 && cat.id <= 15) {
+                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kollektion="${cat.id}">${cat.name}</button>`
+            }
         })
 
         addEventListenersToButtons();
@@ -80,6 +81,7 @@ get_header();
 
     //Viser produkterne gennem et forEach loop//
     function visKollektioner() {
+        console.log("visKollektioner");
         let temp = document.querySelector("template");
         let container = document.querySelector("#kollektion-oversigt");
         container.innerHTML = "";

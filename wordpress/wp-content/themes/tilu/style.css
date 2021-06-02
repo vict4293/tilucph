@@ -12,6 +12,7 @@ h1,
 h2,
 h3 {
     font-family: ivypresto display, serif;
+    letter-spacing: 3px;
 }
 
 p {
@@ -180,12 +181,70 @@ button.submenu-expand:nth-child(2) > svg:nth-child(1) {
     font-size: 0.8rem;
 }
 
+/*filtering */
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: none;
+}
+
+button.filter {
+    color: black;
+    font-family: ivypresto display, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: white;
+    border: solid;
+    padding: 18px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 7rem;
+    border-radius: 0;
+}
+
+#filtrering {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.4rem;
+    padding: 0px 25vw 6vw 25vw;
+
+}
+
+.filtering_kollektion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.4rem;
+    padding: 0px 25vw 6vw 25vw;
+}
+
 /*produkt side*/
 #produkt-oversigt {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     padding: 0 4vw 6vw 4vw;
+}
+
+#produkt-oversigt .produkt {
+    position: relative;
+}
+
+#produkt-oversigt .produkt h2 {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding: 5px;
+}
+
+#produkt-oversigt .produkt img {
+    opacity: 70%;
 }
 
 /*single produkt */
