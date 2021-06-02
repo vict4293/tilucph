@@ -17,6 +17,7 @@ get_header();
     <article class="produkt">
         <img src="" alt="" class="billede">
         <h2 class="titel"></h2>
+        <h3 class="pris"></h3>
     </article>
 </template>
 <div id="primary" class="content-area">
@@ -99,7 +100,7 @@ get_header();
                 let klon = temp.cloneNode(true).content;
 
                 klon.querySelector(".titel").textContent = produkt.title.rendered;
-
+                klon.querySelector("h3").textContent = produkt.pris.rendered;
                 klon.querySelector("img").src = produkt.billede[0].guid;
 
                 klon.querySelector("article").addEventListener("click", () => {

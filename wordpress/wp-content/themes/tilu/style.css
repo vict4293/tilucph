@@ -7,6 +7,14 @@ Description: Stylish Child Theme based on Twenty Nineteen
 */
 
 @import url("https://use.typekit.net/yba0nnh.css");
+/*Gør så man ikke kan scroll til siden*/
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+}
 
 h1,
 h2,
@@ -25,6 +33,7 @@ h2::before {
 }
 
 .site-logo {
+
     top: -20px;
     left: 0;
 }
@@ -194,18 +203,18 @@ button.filter {
     color: black;
     font-family: ivypresto display, serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 100;
+    font-style: italic;
     background-color: white;
-    border: solid;
-    padding: 18px 17px;
-    text-align: center;
+    /* border: solid; */
+    padding: 16px 9px;
+    text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
     cursor: pointer;
-    width: 7rem;
+    width: 9rem;
     border-radius: 0;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 #filtrering {
@@ -240,8 +249,15 @@ button.filter {
 
 #produkt-oversigt .produkt h2 {
     position: absolute;
-    bottom: 8px;
+    bottom: 1rem;
     left: 16px;
+    padding: 5px;
+}
+
+#produkt-oversigt .produkt h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 10px;
     padding: 5px;
 }
 
@@ -256,7 +272,7 @@ button.filter {
 
 #singleProdukt .indhold {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 8vw;
 }
 
@@ -265,28 +281,84 @@ button.filter {
 }
 
 #singleProdukt img {
-    width: 80%;
+    /*    width: 80%;*/
+}
+
+#singleProdukt img .billede2 {
+    width: 100%;
 }
 
 #singleProdukt h1 {
-    font-size: 3rem;
+    font-size: 2, 4rem;
     text-transform: uppercase;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
 }
 
-#singleProdukt col1 {
-    margin-right: 2vw;
+#singleProdukt p {
+    font-family: ivypresto display, serif;
+}
+
+.venstre {
+    text-align: right;
+}
+
+#singleProdukt .col1 {
+    /* margin-right: 2vw; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#singleProdukt .box {
+    /*    padding: 1rem;*/
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
 }
 
 #singleProdukt button {
     border: none;
     background-color: transparent;
     margin-top: 3vw;
-    padding: 0
+    padding: 0;
+}
+
+#singleProdukt .col {
+
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+
+}
+
+#singleProdukt .col2 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /*    padding-top: 1rem;*/
+}
+
+#singleProdukt .col3_container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    /*     padding-top: 1rem;*/
+}
+
+#singleProdukt .col3 {
+    display: flex;
+}
+
+#singleProdukt .box_container {
+    width: auto;
+
 }
 
 #singleProdukt .tilbage {
     width: 5rem;
+
 }
 
 #singleProdukt .tilfoj {
