@@ -12,98 +12,98 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<section id="singleProdukt"></section>
-		</main>
-		<!-- #site-content -->
-	</div>
-	<!-- #primary -->
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+        <section id="singleProdukt"></section>
+    </main>
+    <!-- #site-content -->
+</div>
+<!-- #primary -->
 
 
-	<article class="indhold">
-		<img src="" alt="" class="billede">
-		<h1 class="titel"></h1>
-		<p class="beskrivelse"></p>
+<article class="indhold">
+    <img src="" alt="" class="billede">
+    <h1 class="titel"></h1>
+    <p class="beskrivelse"></p>
 
-		<button id="knap">Tilbage</button>
-	</article>
-	<section id="meresom">
+    <button id="knap">Tilbage</button>
+</article>
+<section id="meresom">
 
-		<template id="fleretemp">
-			<article class="fleretemp1">
-				<div class="container">
-					<img src="" alt="" class="mere">
-					<div class="mellem">
-						<div class="text">
-							<p class="meretitel"></p>
-							<p class="merebeskrivelse"></p>
-						</div>
-					</div>
-				</div>
-			</article>
-		</template>
-	</section>
-
-
-	<script>
-		let produkt;
-		let aktuelprodukt = <?php echo get_the_ID() ?>;
-		let mereSomDette;
-		let mereSom;
+    <template id="fleretemp">
+        <article class="fleretemp1">
+            <div class="container">
+                <img src="" alt="" class="mere">
+                <div class="mellem">
+                    <div class="text">
+                        <p class="meretitel"></p>
+                        <p class="merebeskrivelse"></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </template>
+</section>
 
 
-		const dbUrl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100" + aktuelprodukt;
-		const container = document.querySelector(".indhold");
-
-		const flereTemp = document.querySelector("#fleretemp");
-
-		document.addEventListener("DOMContentLoaded", getJSON);
-
-		async function getJSON() {
-			const data = await fetch(dbUrl);
-			produkt = await data.json();
-
-			let jsonData3 = await fetch("http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?categories=" + mereSomDette);
-			mereSom = await jsonData3.json();
-
-			visProdukt();
-			visMere();
-		}
-
-		function visProdukt() {
-			console.log(visProdukt);
-			document.querySelector(".titel").textContent = produkt.title.rendered;
-			document.querySelector(".billede").src = produkt.billede.guid;
-			document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
-		}
-
-		function visMere() {
-
-			mereSom.forEach(produkt => {
-				if (aktuelprodukt != produkt.id) {
-
-					const klon = flereTemp.cloneNode(true).content;
-
-					klon.querySelector(".mere").src = produkt.billede.guid;
-					klon.querySelector(".meretitel").textContent = produkt.title.rendered;
-					klon.querySelector(".fleretemp1").addEventListener("click", () => {
-						location.href = produkt.link;
-					})
-					mereTemp.appendChild(klon);
-				}
-			})
-
-			//episoder skal være mereSom
-			//episode skal være podcast
-		}
-
-		function tilbageTilProdukter() {
-			history.back();
-		}
-
-	</script>
+<script>
+    let produkt;
+    let aktuelprodukt = <?php echo get_the_ID() ?>;
+    let mereSomDette;
+    let mereSom;
 
 
-	<?php
+    const dbUrl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100" + aktuelprodukt;
+    const container = document.querySelector(".indhold");
+
+    const flereTemp = document.querySelector("#fleretemp");
+
+    document.addEventListener("DOMContentLoaded", getJSON);
+
+    async function getJSON() {
+        const data = await fetch(dbUrl);
+        produkt = await data.json();
+
+        let jsonData3 = await fetch("http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?categories=" + mereSomDette);
+        mereSom = await jsonData3.json();
+
+        visProdukt();
+        visMere();
+    }
+
+    function visProdukt() {
+        console.log(produkt.title.rendered);
+        document.querySelector(".titel").textContent = produkt.title.rendered;
+        document.querySelector(".billede").src = produkt.billede.guid;
+        document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
+    }
+
+    function visMere() {
+
+        mereSom.forEach(produkt => {
+            if (aktuelprodukt != produkt.id) {
+
+                const klon = flereTemp.cloneNode(true).content;
+
+                klon.querySelector(".mere").src = produkt.billede.guid;
+                klon.querySelector(".meretitel").textContent = produkt.title.rendered;
+                klon.querySelector(".fleretemp1").addEventListener("click", () => {
+                    location.href = produkt.link;
+                })
+                mereTemp.appendChild(klon);
+            }
+        })
+
+        //episoder skal være mereSom
+        //episode skal være podcast
+    }
+
+    function tilbageTilProdukter() {
+        history.back();
+    }
+
+</script>
+
+
+<?php
 get_footer();
