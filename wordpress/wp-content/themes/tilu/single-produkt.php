@@ -13,6 +13,7 @@ get_header();
 ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<section id="singleProdukt"></section>
@@ -106,6 +107,45 @@ get_header();
         visProdukt();
     }
 >>>>>>> console log visprodukt
+=======
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+
+        <article id="indhold">
+
+            <h1></h1>
+
+
+
+            <img src="" alt="" class="billede">
+            <h1 class="titel"></h1>
+            <p class="beskrivelse"></p>
+
+            <button id="knap">Tilbage</button>
+
+        </article>
+    </main>
+    <!-- #site-content -->
+</div>
+<!-- #primary -->
+
+
+<script>
+    let produkter;
+    let aktuelprodukt = <?php echo get_the_ID() ?>;
+
+    const dbUrl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100" + aktuelprodukt;
+    const container = document.querySelector("#indhold");
+
+    document.addEventListener("DOMContentLoaded", getJSON);
+
+    async function getJSON() {
+        const data = await fetch(dbUrl);
+        produkt = await data.json();
+
+        visProdukt();
+    }
+>>>>>>> origin/katrin
 
     function visProdukt() {
         console.log(produkt.title.rendered);
@@ -113,6 +153,7 @@ get_header();
         document.querySelector(".billede").src = produkt.billede.guid;
         document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		function visMere() {
@@ -143,6 +184,12 @@ get_header();
         history.back();
     }
 >>>>>>> console log visprodukt
+=======
+
+    function tilbageTilProdukter() {
+        history.back();
+    }
+>>>>>>> origin/katrin
 
 </script>
 
