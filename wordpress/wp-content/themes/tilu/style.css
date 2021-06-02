@@ -7,21 +7,25 @@ Description: Stylish Child Theme based on Twenty Nineteen
 */
 
 @import url("https://use.typekit.net/yba0nnh.css");
+
 h1,
 h2,
 h3 {
-	font-family: ivypresto display, serif;
+    font-family: ivypresto display, serif;
 }
+
 p {
-	font-family: acumin, sans-serif;
-	font-size: 0.8rem;
+    font-family: acumin, sans-serif;
+    font-size: 0.8rem;
 }
+
 h2::before {
-	display: none;
+    display: none;
 }
+
 .site-logo {
-	top: -20px;
-	left: 0;
+    top: -20px;
+    left: 0;
 }
 
 /*
@@ -31,115 +35,146 @@ h2::before {
 */
 
 .site-branding {
-	margin: 4vw;
+    margin: 4vw;
 }
+
 #masthead {
-	padding: 0;
+    padding: 0;
 }
+
 .menu-main-container {
-	font-family: ivypresto display, serif;
-	font-size: 1rem;
+    font-family: ivypresto display, serif;
+    font-size: 1rem;
 }
+
+/*styling af menu*/
+.main-navigation .main-menu > li > a {
+    margin-right: 0.5rem;
+    color: black;
+    font-weight: 400;
+    margin-right: 4.5rem;
+    font-size: 1.3rem;
+}
+
 .entry-content,
 .entry .entry-content,
 .entry .entry-summary {
-	padding: 0;
-	margin-top: 5rem;
+    padding: 0;
+    margin-top: 5rem;
 }
+
 .site-branding {
-	text-align: center;
+    text-align: center;
 }
+
 #menu-item-18 > a:nth-child(1) {
-	color: black;
-	font-weight: 400;
-	font-size: 1.3rem;
+    color: black;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
+
 #menu-item-32 > a:nth-child(1) {
-	color: black;
-	font-weight: 400;
-	margin-right: 4.5rem;
-	font-size: 1.3rem;
+    color: black;
+    font-weight: 400;
+    margin-right: 4.5rem;
+    font-size: 1.3rem;
 }
+
 #menu-item-26 > a:nth-child(1) {
-	color: black;
-	font-weight: 400;
-	font-size: 1.3rem;
+    color: black;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
+
 #menu-item-70 > a:nth-child(1) {
-	display: none;
+    display: none;
 }
+
 button.submenu-expand:nth-child(2) > svg:nth-child(1) {
-	color: black;
-	font-weight: 400;
-	margin-right: 4.5rem;
-	font-size: 1.3rem;
+    color: black;
+    font-weight: 400;
+    margin-right: 4.5rem;
+    font-size: 1.3rem;
 }
+
 .entry-header {
-	display: none;
+    display: none;
 }
+
 #footer-wrapper {
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding: 2vw 4vw 2vw 4vw;
-	background-color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2vw 4vw 2vw 4vw;
+    background-color: white;
 }
+
 #footer-wrapper .col1 {
-	text-align: left;
+    text-align: left;
 }
+
 #footer-wrapper h3 {
-	font-size: 1rem;
-	font-weight: 400;
-	margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
 }
+
 #footer-wrapper p {
-	font-size: 0.8rem;
-	margin-top: 0;
-	font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 0;
+    font-style: italic;
 }
+
 #footer-wrapper form {
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
+
 #footer-wrapper label {
-	font-family: acumin, sans-serif;
-	text-align: left;
-	font-size: 0.7rem;
-	display: block;
-	margin-bottom: -2.5rem;
+    font-family: acumin, sans-serif;
+    text-align: left;
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: -2.5rem;
 }
+
 #footer-wrapper button {
-	border: 1px solid black;
-	background-color: white;
-	color: black;
-	font-family: ivypresto display, serif;
-	font-weight: 400;
-	font-size: 15px;
-	padding: 5px 10px 5px 10px;
-	width: 100px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-family: ivypresto display, serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    width: 100px;
 }
+
 #footer-wrapper input {
-	border-bottom: 1px solid black;
-	width: 60%;
-	border-left: none;
-	border-right: none;
-	border-top: none;
-	background-color: transparent;
+    border-bottom: 1px solid black;
+    width: 60%;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
 }
+
 #footer-wrapper .col2 {
-	text-align: right;
-	margin: 0.8rem 0;
+    text-align: right;
+    margin: 0.8rem 0;
 }
+
 #footer-wrapper a:link {
-	color: black;
-	font-size: 0.8rem;
+    color: black;
+    font-size: 0.8rem;
 }
+
 #footer-wrapper a:visited {
-	color: #1100D8;
-	font-size: 0.8rem;
+    color: #1100D8;
+    font-size: 0.8rem;
 }
+
 #footer-wrapper a:hover {
-	color: #E3F10C;
-	font-size: 0.8rem;
+    color: #E3F10C;
+    font-size: 0.8rem;
 }
