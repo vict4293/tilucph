@@ -154,9 +154,11 @@ button.submenu-expand:nth-child(2) > svg:nth-child(1) {
 	font-size: 0.8rem;
 }
 #singleProdukt {
+	margin: 4vw;
+}
+#singleProdukt .indhold {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin: 4vw;
 	grid-gap: 8vw;
 }
 #singleProdukt .box {
