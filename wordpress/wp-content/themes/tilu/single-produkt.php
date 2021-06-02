@@ -73,6 +73,7 @@ get_header();
 
     function visProdukt() {
         console.log("vis produkt");
+        console.log(produkt.billede.guid);
         document.querySelector("h1").textContent = produkt.title.rendered;
         document.querySelector(".billede").src = produkt.billede.guid;
         document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
