@@ -12,39 +12,43 @@
  */
 
 ?>
+<html>
 
-	</div>
-	<!-- #content -->
-
-	<footer id="colophon" class="site-footer">
+<body>
 
 
-		<div id="footer-wrapper">
-			<div class="col1">
-				<form>
-					<h3>TILMELD NYHEDSBREVE</h3>
-					<p>Hold dig opdateret på det nyeste</p>
-					<label for="email">E-mail</label>
-					<input id="email" name="email" type="email">
-					<button>Tilmeld</button>
-				</form>
-			</div>
+    <div>
+        <!-- #content -->
 
-			<div class="col2">
-				<a href="https://www.instagram.com/tilucph/?hl=da">@tilucph</a>
-				<br> <a href="mailto:Info@tilucph.dk">Info@tilucph.dk</a>
-				<br> <a href="tel:+4528441900">+45 28 44 19 00</a>
-			</div>
-		</div>
+        <footer id="colophon" class="site-footer">
 
-	</footer>
-	<!-- #colophon -->
 
-	</div>
-	<!-- #page -->
+            <div id="footer-wrapper">
+                <div class="col1">
+                    <form>
+                        <h3>TILMELD NYHEDSBREVE</h3>
+                        <p>Hold dig opdateret på det nyeste</p>
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email">
+                        <button>Tilmeld</button>
+                    </form>
+                </div>
 
-	<?php wp_footer(); ?>
+                <div class="col2">
+                    <a href="https://www.instagram.com/tilucph/?hl=da">@tilucph</a>
+                    <br> <a href="mailto:Info@tilucph.dk">Info@tilucph.dk</a>
+                    <br> <a href="tel:+4528441900">+45 28 44 19 00</a>
+                </div>
+            </div>
 
-		</body>
+        </footer>
+        <!-- #colophon -->
 
-		</html>
+    </div>
+    <!-- #page -->
+
+    <?php wp_footer(); ?>
+
+</body>
+
+</html>
