@@ -103,6 +103,11 @@ get_header();
 			console.log(produkt.billede.guid);
 			document.querySelector(".billede").src = produkt.billede[0].guid;
 			document.querySelector(".titel").textContent = produkt.title.rendered;
+			document.querySelector(".pris").textContent = produkt.title.rendered;
+
+			document.querySelector(".storrelse").textContent = produkt.title.rendered;
+
+			document.querySelector(".type").textContent = produkt.title.rendered;
 			document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
 		}
 
