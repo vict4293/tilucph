@@ -91,7 +91,7 @@ get_header();
 
 					klon.querySelector(".titel").textContent = produkt.title.rendered;
 
-					klon.querySelector("img").src = produkt.billede.guid;
+					klon.querySelector("img").src = produkt.billede[0].guid;
 
 					klon.querySelector("article").addEventListener("click", () => {
 						location.href = produkt.link;
