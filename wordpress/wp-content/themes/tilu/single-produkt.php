@@ -109,7 +109,7 @@ get_header();
 
     function visProdukt() {
         console.log(produkt.title.rendered);
-        document.querySelector(".titel").innerHTML = produkt.title.rendered;
+        document.querySelector(".titel").textContent = produkt.title.rendered;
         document.querySelector(".billede").src = produkt.billede.guid;
         document.querySelector("#knap").addEventListener("click", tilbageTilProdukter);
     }
