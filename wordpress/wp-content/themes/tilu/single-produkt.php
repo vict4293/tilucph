@@ -14,7 +14,36 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<section id="singleProdukt"></section>
+			<section id="singleProdukt">
+				<article class="indhold">
+
+
+
+					<div class="col1">
+						<h1 class="titel"></h1>
+						<div class="box">
+							<p class="pris"></p>
+						</div>
+						<div class="box">
+							<p class="storrelse"></p>
+						</div>
+						<div class="box">
+							<p class="type"></p>
+						</div>
+
+
+						<button class="tilbage"><img src="tilbage.png" alt=""></button>
+						<button class="tilfoj"><img src="tilfoj.png" alt=""></button>
+					</div>
+
+					<div class="col">
+						<img src="" alt="" class="billede">
+					</div>
+
+
+					<button id="knap">Tilbage</button>
+				</article>
+			</section>
 		</main>
 		<!-- #site-content -->
 	</div>
@@ -22,34 +51,7 @@ get_header();
 
 
 
-	<article class="indhold">
 
-
-
-		<div class="col1">
-			<h1 class="titel"></h1>
-			<div class="box">
-				<p class="pris"></p>
-			</div>
-			<div class="box">
-				<p class="storrelse"></p>
-			</div>
-			<div class="box">
-				<p class="type"></p>
-			</div>
-
-
-			<button class="tilbage"><img src="tilbage.png" alt=""></button>
-			<button class="tilfoj"><img src="tilfoj.png" alt=""></button>
-		</div>
-
-		<div class="col">
-			<img src="" alt="" class="billede">
-		</div>
-
-
-		<button id="knap">Tilbage</button>
-	</article>
 
 
 
