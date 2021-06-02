@@ -112,6 +112,7 @@ get_header();
 
         document.querySelector(".billede1").src = produkt.billede[0].guid;
         document.querySelector(".titel").textContent = produkt.title.rendered;
+
         document.querySelector(".pris").innerHTML = produkt.pris.rendered + " kr";
 
         document.querySelector(".storrelse").innerHTML = produkt.strrelse.rendered;
