@@ -113,11 +113,11 @@ get_header();
         document.querySelector(".billede1").src = produkt.billede[0].guid;
         document.querySelector(".titel").textContent = produkt.title.rendered;
 
-        document.querySelector(".pris").innerHTML = produkt.pris.rendered + " kr";
+        document.querySelector(".pris").innerHTML = produkt.pris + " kr";
 
-        document.querySelector(".storrelse").innerHTML = produkt.strrelse.rendered;
+        document.querySelector(".storrelse").innerHTML = produkt.strrelse;
 
-        document.querySelector(".type").innerHTML = produkt.produkttype.rendered;
+        document.querySelector(".type").innerHTML = produkt.produkttype;
 
         document.querySelector(".billede2").src = produkt.billede[1].guid;
 
@@ -143,14 +143,14 @@ get_header();
         console.log("3 billede");
 
         document.querySelector(".billede1").src = produkt.billede[2].guid;
-        //        document.querySelector(".billede3").src = produkt.billede[0].guid;
+//        document.querySelector(".billede3").src = produkt.billede[0].guid;
     }
 
     function fjerdeBillede() {
         console.log("4 billede");
 
         document.querySelector(".billede1").src = produkt.billede[3].guid;
-        //        document.querySelector(".billede4").src = produkt.billede[0].guid;
+//        document.querySelector(".billede4").src = produkt.billede[0].guid;
     }
     document.querySelector(".tilbage").addEventListener("click", tilbageTilProdukter);
 
