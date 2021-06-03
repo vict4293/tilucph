@@ -125,7 +125,30 @@ get_header();
 
         document.querySelector(".billede4").src = produkt.billede[3].guid;
     }
+    //   add event listener to alle billdederne
+    document.querySelector(".billede2").addEventListener("click", andenBillede);
 
+    document.querySelector(".billede3").addEventListener("click", trejdeBillede);
+
+    document.querySelector(".billede4").addEventListener("click", fjerdeBillede);
+    //hvis klikked er på billedet så skipter den plads med billede1
+    function andenBillede() {
+        console.log("anden billede");
+
+        document.querySelector(".billede1").src = produkt.billede[1].guid;
+    }
+
+    function trejdeBillede() {
+        console.log("3 billede");
+
+        document.querySelector(".billede1").src = produkt.billede[2].guid;
+    }
+
+    function fjerdeBillede() {
+        console.log("4 billede");
+
+        document.querySelector(".billede1").src = produkt.billede[3].guid;
+    }
     document.querySelector(".tilbage").addEventListener("click", tilbageTilProdukter);
 
     function tilbageTilProdukter() {
