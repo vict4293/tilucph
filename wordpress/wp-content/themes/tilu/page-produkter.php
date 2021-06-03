@@ -66,7 +66,7 @@ get_header();
 
         //Oppretter knapper med data produkt fra hvert og et cat.id og skrever navned på knappen
 
-        //        hvordan kan jeg få den til at vise kun de produkter,
+
         categories.forEach(cat => {
             if ((cat.id >= 3 && cat.id <= 10) || cat.id == 16) {
                 document.querySelector("#filtrering").innerHTML += `<button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
@@ -100,7 +100,7 @@ get_header();
                 let klon = temp.cloneNode(true).content;
 
                 klon.querySelector(".titel").textContent = produkt.title.rendered;
-                klon.querySelector("h3").textContent = produkt.pris.rendered;
+                klon.querySelector("h3").textContent = produkt.pris;
                 klon.querySelector("img").src = produkt.billede[0].guid;
 
                 klon.querySelector("article").addEventListener("click", () => {

@@ -12,19 +12,20 @@
 get_header();
 ?>
 <template>
-    <article class="kollektion">
+    <article class="produkt">
         <img src="" alt="" class="billede">
         <h2 class="titel"></h2>
+        <h3 class="pris"></h3>
     </article>
 </template>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-        <nav id="filtrering" class="filtering_kollektion">
+        <nav id="filtrering">
             <button data-genre="alle">Alle</button>
         </nav>
 
-        <section id="kollektion-oversigt"></section>
+        <section id="produkt-oversigt"></section>
     </main>
     <!-- #main -->
 </div>
@@ -32,9 +33,9 @@ get_header();
 
 
 <script>
-    let kollektioner;
+    let produkter;
     let categories;
-    let filterKollektion = "alle";
+    let filterProdukt = "alle";
 
     //Henter data gennem WP rest API url med fetch funktion//
     const dburl = "http://victorialoekke.dk/kea/tilu/wordpress/wp-json/wp/v2/produkt?per_page=100";
@@ -45,27 +46,28 @@ get_header();
     document.addEventListener("DOMContentLoaded", start);
 
     function start() {
-        console.log("get json");
         getJson();
     }
 
     async function getJson() {
         const data = await fetch(dburl);
         const catdata = await fetch(caturl);
-        kollektioner = await data.json();
+        produkter = await data.json();
         categories = await catdata.json();
         console.log(categories);
-        visKollektioner();
+        visProdukter();
         opretKnapper();
     }
 
 
-
-
     function opretKnapper() {
+        console.log("opret knapper");
+
+        //Oppretter knapper med data produkt fra hvert og et cat.id og skrever navned på knappen
+
         categories.forEach(cat => {
             if (cat.id >= 11 && cat.id <= 15) {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kollektion="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
             }
         })
 
@@ -93,22 +95,22 @@ get_header();
 
     function filtrering() {
         console.log("filtering");
-        filterKollektion = this.dataset.kollektion;
-        visKollektioner;
+        filterProdukt = this.dataset.produkt;
+        visProdukter();
     }
 
     //Viser produkterne gennem et forEach loop//
-    function visKollektioner() {
-        console.log("visKollektioner");
+    function visProdukter() {
+        console.log("vis produkter");
         let temp = document.querySelector("template");
-        let container = document.querySelector("#kollektion-oversigt");
+        let container = document.querySelector("#produkt-oversigt");
         container.innerHTML = "";
-        kollektioner.forEach(kollektion => {
-            if (produkt.categories.includes(parseInt(filterKollektion))) {
+        produkter.forEach(produkt => {
+            if (produkt.categories.includes(parseInt(filterProdukt))) {
                 let klon = temp.cloneNode(true).content;
 
                 klon.querySelector(".titel").textContent = produkt.title.rendered;
-
+                klon.querySelector("h3").textContent = produkt.pris;
                 klon.querySelector("img").src = produkt.billede[0].guid;
 
                 klon.querySelector("article").addEventListener("click", () => {
