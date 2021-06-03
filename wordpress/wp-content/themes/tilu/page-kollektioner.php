@@ -11,11 +11,12 @@
 
 get_header();
 ?>
+
 <template>
     <article class="produkt">
         <img src="" alt="" class="billede">
         <h2 class="titel"></h2>
-        <h3 class="pris"></h3>
+        <p class="pris"></p>
     </article>
 </template>
 <div id="primary" class="content-area">
@@ -58,16 +59,17 @@ get_header();
         visProdukter();
         opretKnapper();
     }
-
+    let menuBilleder = ["http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01374-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSCF3102-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01326-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01246-scaled.jpg"]
 
     function opretKnapper() {
         console.log("opret knapper");
 
         //Oppretter knapper med data produkt fra hvert og et cat.id og skrever navned på knappen
-
-        categories.forEach(cat => {
+        let index = 0;
+        categories.forEach((cat) => {
             if (cat.id >= 11 && cat.id <= 15) {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering").innerHTML += `<img src="${menuBilleder[index]}" alt="" ><button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
+                index++;
             }
         })
 
@@ -86,6 +88,25 @@ get_header();
     // catName = "nordisk";
     // catName = "minimalistisk";
     // catName = "blomster";
+
+
+    /*  let catName;
+
+      switch (cat.id) {
+          case 12:
+              catName = 'simple'
+              break;
+          case 13:
+              catName = 'nordisk'
+              break;
+          case 14:
+              catName = 'minimalsistik'
+              break;
+          default:
+              catName = 'quad'
+              break;
+
+              var simple = document.createElement("IMG");*/
 
     function addEventListenersToButtons() {
         document.querySelectorAll("#filtrering button").forEach(elm => {
@@ -110,7 +131,7 @@ get_header();
                 let klon = temp.cloneNode(true).content;
 
                 klon.querySelector(".titel").textContent = produkt.title.rendered;
-                klon.querySelector("h3").textContent = produkt.pris;
+                klon.querySelector("p").textContent = produkt.pris + " kr";
                 klon.querySelector("img").src = produkt.billede[0].guid;
 
                 klon.querySelector("article").addEventListener("click", () => {

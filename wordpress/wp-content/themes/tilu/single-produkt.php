@@ -125,33 +125,22 @@ get_header();
 
         document.querySelector(".billede4").src = produkt.billede[3].guid;
     }
-    //   add event listener to alle billdederne
-    document.querySelector(".billede2").addEventListener("click", andenBillede);
+    // sætter eventlistener to all the small images in col2
 
-    document.querySelector(".billede3").addEventListener("click", trejdeBillede);
+    document.querySelectorAll(".col .col2 img").forEach(img => {
+        img.addEventListener("click", imgKlik);
 
-    document.querySelector(".billede4").addEventListener("click", fjerdeBillede);
-    //hvis klikked er på billedet så skipter den plads med billede1
-    function andenBillede() {
-        console.log("anden billede");
+    })
+    //tempSrc er billedet i store pladsen
+    // hvis de er klikket på de små billede bytter de plads med tempSrc og this er pladsen hvor de små billede liggede for og den bliver skipted ud med den store billede "tempScr"
+    function imgKlik() {
+        console.log("Klik", this);
+        let tempSrc = document.querySelector(".billede1").src;
 
-        document.querySelector(".billede1").src = produkt.billede[1].guid;
-        document.querySelector(".billede2").src = produkt.billede[0].guid;
+        document.querySelector(".billede1").src = this.src;
+        this.src = tempSrc;
     }
 
-    function trejdeBillede() {
-        console.log("3 billede");
-
-        document.querySelector(".billede1").src = produkt.billede[2].guid;
-//        document.querySelector(".billede3").src = produkt.billede[0].guid;
-    }
-
-    function fjerdeBillede() {
-        console.log("4 billede");
-
-        document.querySelector(".billede1").src = produkt.billede[3].guid;
-//        document.querySelector(".billede4").src = produkt.billede[0].guid;
-    }
     document.querySelector(".tilbage").addEventListener("click", tilbageTilProdukter);
 
     function tilbageTilProdukter() {
