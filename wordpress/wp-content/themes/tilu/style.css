@@ -271,7 +271,7 @@ button.filter {
     margin: 4vw;
 }
 
-#singleProdukt img:hoover {
+#singleProdukt img {
     cursor: pointer;
 }
 
