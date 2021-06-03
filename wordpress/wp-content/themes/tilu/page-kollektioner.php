@@ -73,17 +73,17 @@ get_header();
         addEventListenersToButtons();
     }
 
-//    let catName;
-  //
-  // function simpleBillede() {
-  // console.log("simpleBillede");
-  // catName = "simple";
-  // var simple = document.createElement("IMG");
-  // simple.setAttribute("src", "img_pulpit.jpg");
-  // }
-  // catName = "nordisk";
-  // catName = "minimalistisk";
-  // catName = "blomster";
+    //    let catName;
+    //
+    // function simpleBillede() {
+    // console.log("simpleBillede");
+    // catName = "simple";
+    // var simple = document.createElement("IMG");
+    // simple.setAttribute("src", "img_pulpit.jpg");
+    // }
+    // catName = "nordisk";
+    // catName = "minimalistisk";
+    // catName = "blomster";
 
     function addEventListenersToButtons() {
         document.querySelectorAll("#filtrering button").forEach(elm => {
@@ -92,6 +92,7 @@ get_header();
     };
 
     function filtrering() {
+        console.log("filtering");
         filterKollektion = this.dataset.kollektion;
         visKollektioner;
     }
@@ -103,15 +104,15 @@ get_header();
         let container = document.querySelector("#kollektion-oversigt");
         container.innerHTML = "";
         kollektioner.forEach(kollektion => {
-            if (kollektion.categories.includes(parseInt(filterKollektion))) {
+            if (produkt.categories.includes(parseInt(filterKollektion))) {
                 let klon = temp.cloneNode(true).content;
 
-                klon.querySelector(".titel").textContent = kollektion.title.rendered;
+                klon.querySelector(".titel").textContent = produkt.title.rendered;
 
-                klon.querySelector("img").src = kollektion.billede[0].guid;
+                klon.querySelector("img").src = produkt.billede[0].guid;
 
                 klon.querySelector("article").addEventListener("click", () => {
-                    location.href = kollektion.link;
+                    location.href = produkt.link;
                 })
                 container.appendChild(klon);
             }
