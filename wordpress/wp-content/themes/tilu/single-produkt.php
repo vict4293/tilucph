@@ -16,6 +16,7 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <section id="singleProdukt">
+            <button class=" tilbage"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
             <article class="indhold">
                 <div class="col1">
                     <h1 class="titel"></h1>
@@ -34,7 +35,7 @@ get_header();
                         </div>
                     </div>
                     <div class="col3_container">
-                        <button class=" col3 tilbage"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
+
 
                         <button class=" col3 tilfoj"><img src="http://victorialoekke.dk/kea/tilfoj.png" alt="tilfoj"></button>
                     </div>
@@ -140,13 +141,16 @@ get_header();
         document.querySelector(".billede1").src = this.src;
         this.src = tempSrc;
     }
-
+    //tilbage knap
+    document.querySelector(".tilbage").style.display = "block";
     document.querySelector(".tilbage").addEventListener("click", tilbageTilProdukter);
 
     function tilbageTilProdukter() {
         console.log("tilbageTilProdukter")
         history.back();
     }
+    //tilbage knap
+
     //		function visMere() {
     //
     //			mereSom.forEach(produkt => {

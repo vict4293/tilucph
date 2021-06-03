@@ -11,7 +11,9 @@
 
 get_header();
 ?>
-
+<div class="tilbage_knap">
+    <button class="tilbage_kollektion"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
+</div>
 <template>
     <article class="produkt">
         <img src="" alt="" class="billede">
@@ -22,11 +24,13 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-        <nav id="filtrering">
-            <button data-genre="alle">Alle</button>
+        <nav id="filtrering_kollektion">
+            <button class="billede" data-genre="alle">Alle</button>
         </nav>
 
-        <section id="produkt-oversigt"></section>
+        <section id="produkt-oversigt">
+
+        </section>
     </main>
     <!-- #main -->
 </div>
@@ -59,6 +63,7 @@ get_header();
         visProdukter();
         opretKnapper();
     }
+    //array liste med billederne til knapper af kollektioner
     let menuBilleder = ["http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01374-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSCF3102-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01326-scaled.jpg", "http://www.victorialoekke.dk/kea/tilu/wordpress/wp-content/uploads/2021/06/DSC01246-scaled.jpg"]
 
     function opretKnapper() {
@@ -68,7 +73,7 @@ get_header();
         let index = 0;
         categories.forEach((cat) => {
             if (cat.id >= 11 && cat.id <= 15) {
-                document.querySelector("#filtrering").innerHTML += `<img src="${menuBilleder[index]}" alt="" ><button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering_kollektion").innerHTML += `<img src="${menuBilleder[index]}" alt="" ><button class="filter kollektion" data-produkt="${cat.id}">${cat.name}</button>`
                 index++;
             }
         })
@@ -77,39 +82,10 @@ get_header();
         addEventListenersToButtons();
     }
 
-    //    let catName;
-    //
-    // function simpleBillede() {
-    // console.log("simpleBillede");
-    // catName = "simple";
-    // var simple = document.createElement("IMG");
-    // simple.setAttribute("src", "img_pulpit.jpg");
-    // }
-    // catName = "nordisk";
-    // catName = "minimalistisk";
-    // catName = "blomster";
 
-
-    /*  let catName;
-
-      switch (cat.id) {
-          case 12:
-              catName = 'simple'
-              break;
-          case 13:
-              catName = 'nordisk'
-              break;
-          case 14:
-              catName = 'minimalsistik'
-              break;
-          default:
-              catName = 'quad'
-              break;
-
-              var simple = document.createElement("IMG");*/
 
     function addEventListenersToButtons() {
-        document.querySelectorAll("#filtrering button").forEach(elm => {
+        document.querySelectorAll("#filtrering_kollektion button").forEach(elm => {
             elm.addEventListener("click", filtrering);
         })
     };
@@ -118,8 +94,29 @@ get_header();
         console.log("filtering");
         filterProdukt = this.dataset.produkt;
         visProdukter();
+        fjernKnapper();
     }
 
+
+    function fjernKnapper() {
+        console.log("fjern knapper");
+        document.querySelector("#filtrering_kollektion").style.display = "none";
+        visTilbageKnap();
+    }
+    //tilbage knap
+    function visTilbageKnap() {
+        console.log("vis tilbage knap");
+        document.querySelector(".tilbage_kollektion").style.display = "block";
+    }
+
+    document.querySelector(".tilbage_kollektion").addEventListener("click", tilbageTilKollektion);
+
+    function tilbageTilKollektion() {
+        console.log("tilbageTilKollektion")
+        location.reload();
+    }
+
+    //tilbage knap
     //Viser produkterne gennem et forEach loop//
     function visProdukter() {
         console.log("vis produkter");

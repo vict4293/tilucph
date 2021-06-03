@@ -13,9 +13,12 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
-    margin: 0px;
+    margin: 10px;
 }
 
+/*Mobil*/
+
+/*skrift*/
 h1,
 h2,
 h3 {
@@ -28,43 +31,25 @@ p {
     font-size: 0.8rem;
 }
 
-h2::before {
-    display: none;
-}
-
+/*skrift slut*/
 .site-logo {
 
     top: -20px;
     left: 0;
 }
 
-/*
-#page {
-	background-image: url(baggrund.jpg);
-}
-*/
-
-.site-branding {
-    margin: 4vw;
-}
-
-#masthead {
-    padding: 0;
-}
-
-.menu-main-container {
-    font-family: ivypresto display, serif;
-    font-size: 1rem;
-}
-
 /*styling af menu*/
-
+/*listen over menu ting*/
 .main-navigation .main-menu > li > a {
     margin-right: 0.5rem;
     color: black;
     font-weight: 400;
-    margin-right: 4.5rem;
+    margin-right: 2.5rem;
     font-size: 1.3rem;
+}
+
+.main-navigation .main-menu > li {
+    color: black;
 }
 
 .entry-content,
@@ -84,10 +69,11 @@ h2::before {
     font-size: 1.3rem;
 }
 
+/*    events*/
 #menu-item-32 > a:nth-child(1) {
     color: black;
     font-weight: 400;
-    margin-right: 4.5rem;
+    margin-right: 2.5rem;
     font-size: 1.3rem;
 }
 
@@ -101,10 +87,42 @@ h2::before {
     display: none;
 }
 
+.site-branding {
+    margin: 4vw;
+}
+
+#masthead {
+    padding: 0;
+}
+
+.menu-main-container {
+    font-family: ivypresto display, serif;
+    font-size: 1rem;
+}
+
+/*sub menu*/
+.main-navigation .sub-menu {
+    background-color: white;
+    color: black;
+    list-style: none;
+}
+
+.main-navigation .sub-menu > li > a,
+.main-navigation .sub-menu > li > .menu-item-link-return {
+    color: black;
+    display: block;
+    line-height: 1.2;
+    text-shadow: none;
+    padding: calc(.5 * 1rem) calc(24px + 1rem) calc(.5 * 1rem) 1rem;
+    max-width: 20rem;
+    font-family: ivypresto display, serif;
+}
+
+/*pile ned*/
 button.submenu-expand:nth-child(2) > svg:nth-child(1) {
     color: black;
     font-weight: 400;
-    margin-right: 4.5rem;
+    margin-right: 2.5rem;
     font-size: 1.3rem;
 }
 
@@ -112,6 +130,243 @@ button.submenu-expand:nth-child(2) > svg:nth-child(1) {
     display: none;
 }
 
+/*
+#masthead {
+    background-color: white;
+    opacity: 70%;
+}
+*/
+
+/*styling af menu slut*/
+/*filtering */
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: none;
+}
+
+button.filter {
+    color: black;
+    font-family: ivypresto display, serif;
+    font-size: 1rem;
+    font-weight: 100;
+    font-style: italic;
+    background-color: white;
+    /* border: solid; */
+    padding: 16px 9px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 9rem;
+    border-radius: 0;
+    letter-spacing: 2px;
+}
+
+
+
+button.filter.kollektion {
+    left: -33vw;
+    top: 9vh;
+    position: relative;
+    color: black;
+    font-family: ivypresto display, serif;
+    font-size: 0.5rem;
+    font-weight: 100;
+    font-style: italic;
+    background-color: white;
+    border: solid;
+    padding: 8px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: grid;
+    width: 4.5rem;
+    height: 1.5rem;
+    border-radius: 0;
+    letter-spacing: 1px;
+
+}
+
+#filtrering {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.4rem;
+    /*    padding: 0px 25vw 6vw 25vw;*/
+
+}
+
+#filtrering_kollektion {
+    display: grid;
+    grid-template-columns: 4fr 7% 4fr 0%;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 3rem;
+    padding: 0px 5vw 2vw 5vw;
+}
+
+/*filtering slut */
+/*produkt side*/
+#produkt-oversigt {
+
+    padding: 0 4vw 6vw 4vw;
+    margin-top: 136px;
+}
+
+#produkt-oversigt .produkt {
+    position: relative;
+}
+
+#produkt-oversigt .produkt h2 {
+    position: absolute;
+    bottom: 1rem;
+    left: 16px;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+#produkt-oversigt .produkt p {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 16px;
+    padding: 5px;
+    font-family: ivypresto display, serif;
+}
+
+#produkt-oversigt .produkt img {
+    opacity: 70%;
+}
+
+/*produktside slut */
+
+/*single produkt */
+#singleProdukt {
+    margin: 4vw;
+}
+
+#singleProdukt img {
+    cursor: pointer;
+}
+
+/*
+#singleProdukt .indhold {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 8vw;
+}*/
+
+#singleProdukt .box {
+    border-bottom: 2px solid black;
+}
+
+#singleProdukt img {
+    /*    width: 80%;*/
+}
+
+#singleProdukt img .billede2 {
+    width: 100%;
+}
+
+#singleProdukt h1 {
+    font-size: 2, 4rem;
+    text-transform: uppercase;
+    padding-bottom: 5rem;
+}
+
+#singleProdukt p {
+    font-family: ivypresto display, serif;
+}
+
+.venstre {
+    text-align: right;
+}
+
+#singleProdukt .col1 {
+    /* margin-right: 2vw; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#singleProdukt .box {
+    /*    padding: 1rem;*/
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+#singleProdukt button {
+    border: none;
+    background-color: transparent;
+    margin-top: 3vw;
+    padding: 0;
+}
+
+#singleProdukt .col {
+
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+
+}
+
+#singleProdukt .col2 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /*    padding-top: 1rem;*/
+}
+
+#singleProdukt .col3_container {
+    /*
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+*/
+    /*     padding-top: 1rem;*/
+}
+
+#singleProdukt .col3 {
+    display: flex;
+    grid-column: 3;
+}
+
+#singleProdukt .box_container {
+    width: 84vw;
+
+}
+
+#singleProdukt .tilbage {
+    width: 2rem;
+
+}
+
+#singleProdukt .tilfoj {
+    width: 8rem;
+    margin-left: 4rem;
+}
+
+/*singleprodukt slut */
+
+
+/*tilbage*/
+.tilbage_knap {
+    position: absolute;
+    left: 2vw;
+    top: 30vh;
+}
+
+.tilbage_kollektion {
+    width: 4rem;
+    background-color: white;
+    display: none;
+}
+
+/*footer */
 #footer-wrapper {
     position: relative;
     display: grid;
@@ -185,189 +440,286 @@ button.submenu-expand:nth-child(2) > svg:nth-child(1) {
     font-size: 0.8rem;
 }
 
-#footer-wrapper a:hover {
-    color: #E3F10C;
-    font-size: 0.8rem;
+/*footer slut*/
+
+/*
+ipad
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+
+    button.filter.kollektion {
+        left: -23.8vw;
+        top: 15vh;
+    }
 }
-
-/*filtering */
-
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    display: none;
-}
-
-button.filter {
-    color: black;
-    font-family: ivypresto display, serif;
-    font-size: 1rem;
-    font-weight: 100;
-    font-style: italic;
-    background-color: white;
-    /* border: solid; */
-    padding: 16px 9px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width: 9rem;
-    border-radius: 0;
-    letter-spacing: 2px;
-}
-
-#filtrering {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.4rem;
-    padding: 0px 25vw 6vw 25vw;
+*/
 
 
-}
+/*Desktop*/
 
-.filtering_kollektion {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0.4rem;
-    padding: 0px 25vw 6vw 25vw;
-}
+@media (min-width: 769px) {
 
-/*produkt side*/
-#produkt-oversigt {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    padding: 0 4vw 6vw 4vw;
-}
+    html,
+    body {
+        margin: 0px;
+    }
 
-#produkt-oversigt .produkt {
-    position: relative;
-}
+    h2::before {
+        display: none;
+    }
 
-#produkt-oversigt .produkt h2 {
-    position: absolute;
-    bottom: 1rem;
-    left: 16px;
-    padding: 5px;
-}
+    .site-logo {
 
-#produkt-oversigt .produkt p {
-    position: absolute;
-    bottom: 0.2rem;
-    left: 16px;
-    padding: 5px;
-    font-family: ivypresto display, serif;
-}
+        top: -20px;
+        left: 0;
+    }
 
-#produkt-oversigt .produkt img {
-    opacity: 70%;
-}
+    /*styling af menu */
+    /*    events*/
+    #menu-item-32 > a:nth-child(1) {
 
-/*single produkt */
-#singleProdukt {
-    margin: 4vw;
-}
+        margin-right: 4.5rem;
 
-#singleProdukt img {
-    cursor: pointer;
-}
+    }
 
-#singleProdukt .indhold {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 8vw;
-}
+    /*listen over menu ting*/
+    .main-navigation .main-menu > li > a {
 
-#singleProdukt .box {
-    border-bottom: 2px solid black;
-}
+        margin-right: 4.5rem;
 
-#singleProdukt img {
-    /*    width: 80%;*/
-}
+    }
 
-#singleProdukt img .billede2 {
-    width: 100%;
-}
+    /*pile ned*/
+    button.submenu-expand:nth-child(2) > svg:nth-child(1) {
 
-#singleProdukt h1 {
-    font-size: 2, 4rem;
-    text-transform: uppercase;
-    padding-bottom: 5rem;
-}
+        margin-right: 4.5rem;
+    }
 
-#singleProdukt p {
-    font-family: ivypresto display, serif;
-}
 
-.venstre {
-    text-align: right;
-}
 
-#singleProdukt .col1 {
-    /* margin-right: 2vw; */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
 
-#singleProdukt .box {
-    /*    padding: 1rem;*/
-    display: grid;
-    grid-template-columns: 2fr 1fr;
 
-}
 
-#singleProdukt button {
-    border: none;
-    background-color: transparent;
-    margin-top: 3vw;
-    padding: 0;
-}
 
-#singleProdukt .col {
 
-    display: block;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+    /*filtering */
 
-}
+    .button,
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        display: none;
+    }
 
-#singleProdukt .col2 {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    /*    padding-top: 1rem;*/
-}
+    button.filter {
+        color: black;
+        font-family: ivypresto display, serif;
+        font-size: 1rem;
+        font-weight: 100;
+        font-style: italic;
+        background-color: white;
+        /* border: solid; */
+        padding: 16px 9px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        width: 9rem;
+        border-radius: 0;
+        letter-spacing: 2px;
+    }
 
-#singleProdukt .col3_container {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    /*     padding-top: 1rem;*/
-}
 
-#singleProdukt .col3 {
-    display: flex;
-}
 
-#singleProdukt .box_container {
-    width: auto;
+    button.filter.kollektion {
+        left: -20.8vw;
+        top: 23vh;
+        font-size: 1rem;
+        background-color: white;
+        padding: 19px 22px;
+        cursor: pointer;
+        width: 9rem;
+        height: 3rem;
+        letter-spacing: 2px;
+    }
 
-}
+    #filtrering {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.4rem;
+        padding: 0px 25vw 6vw 25vw;
 
-#singleProdukt .tilbage {
-    width: 5rem;
+    }
 
-}
+    #filtrering_kollektion {
+        display: grid;
+        grid-template-columns: 4fr 7% 4fr 0%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 3rem;
+        padding: 0px 20vw 2vw 20vw;
 
-#singleProdukt .tilfoj {
-    width: 10rem;
-    margin-left: 11rem
+    }
+
+    /*filtering slut */
+    /*tilbage */
+    .tilbage_knap {
+        position: absolute;
+        left: 2vw;
+        top: 20vh;
+    }
+
+    .tilbage_kollektion {
+        width: 5rem;
+        background-color: white;
+    }
+
+    #filtrering_kollektion img {
+        width: auto;
+
+    }
+
+
+
+
+    /*produkt side*/
+    #produkt-oversigt {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0 4vw 6vw 4vw;
+        margin-top: 80px;
+    }
+
+    #produkt-oversigt .produkt {
+        position: relative;
+    }
+
+    #produkt-oversigt .produkt h2 {
+        position: absolute;
+        bottom: 1rem;
+        left: 16px;
+        padding: 5px;
+        font-size: 1.5em;
+    }
+
+    #produkt-oversigt .produkt p {
+        position: absolute;
+        bottom: 0.2rem;
+        left: 16px;
+        padding: 5px;
+        font-family: ivypresto display, serif;
+    }
+
+    #produkt-oversigt .produkt img {
+        opacity: 70%;
+    }
+
+    /*produktside slut */
+
+    /*single produkt */
+    #singleProdukt {
+        margin: 4vw;
+    }
+
+    #singleProdukt img {
+        cursor: pointer;
+    }
+
+    #singleProdukt .indhold {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 8vw;
+    }
+
+    #singleProdukt .box {
+        border-bottom: 2px solid black;
+    }
+
+    #singleProdukt img {
+        /*    width: 80%;*/
+    }
+
+    #singleProdukt img .billede2 {
+        width: 100%;
+    }
+
+    #singleProdukt h1 {
+        font-size: 2, 4rem;
+        text-transform: uppercase;
+        padding-bottom: 5rem;
+    }
+
+    #singleProdukt p {
+        font-family: ivypresto display, serif;
+    }
+
+    .venstre {
+        text-align: right;
+    }
+
+    #singleProdukt .col1 {
+        /* margin-right: 2vw; */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #singleProdukt .box {
+        /*    padding: 1rem;*/
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+    #singleProdukt button {
+        border: none;
+        background-color: transparent;
+        margin-top: 3vw;
+        padding: 0;
+    }
+
+    #singleProdukt .col {
+
+        display: block;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+
+    }
+
+    #singleProdukt .col2 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        /*    padding-top: 1rem;*/
+    }
+
+    #singleProdukt .col3_container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        /*     padding-top: 1rem;*/
+    }
+
+    #singleProdukt .col3 {
+        display: flex;
+        grid-column: 3;
+    }
+
+    #singleProdukt .box_container {
+        width: auto;
+
+    }
+
+    #singleProdukt .tilbage {
+        width: 3rem;
+
+    }
+
+    #singleProdukt .tilfoj {
+        width: 10rem;
+        margin-left: 11rem
+    }
 }
