@@ -270,7 +270,7 @@ button.filter.kollektion {
 }
 
 #singleProdukt h1 {
-    font-size: 2, 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
     padding-bottom: 5rem;
 }
@@ -364,6 +364,14 @@ button.filter.kollektion {
     width: 4rem;
     background-color: white;
     display: none;
+}
+
+#singleProdukt button {
+    border: none;
+    background-color: transparent;
+    margin-top: 3vw;
+    padding: 0;
+    margin-left: 10rem;
 }
 
 /*footer */
@@ -673,10 +681,9 @@ ipad
     }
 
     #singleProdukt button {
-        border: none;
+
         background-color: transparent;
-        margin-top: 3vw;
-        padding: 0;
+
     }
 
     #singleProdukt .col {
