@@ -2,7 +2,7 @@
 Theme name: TILU
 Template: twentynineteen
 Author: Victoria Løkke
-Version: 1.1.0
+Version: 1.1.1
 Description: Stylish Child Theme based on Twenty Nineteen
 */
 
@@ -431,7 +431,7 @@ ipad
 
 /*Desktop*/
 
-@media (min-width: 769px) {
+@media only screen and (min-width: 600px) {
 	html,
 	body {
 		margin: 0px;
@@ -638,5 +638,10 @@ ipad
 		grid-template-columns: 1fr 1fr;
 		padding: 2vw 4vw 2vw 4vw;
 		background-color: white;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.wp-block-spacer {
+		display: none;
 	}
 }
