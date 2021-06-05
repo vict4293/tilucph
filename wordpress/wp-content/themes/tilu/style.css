@@ -547,6 +547,11 @@ ipad
         color: #000fbc;
     }
 
+    /*om tilu*/
+    #menu-item-306 > a:nth-child(1):hover {
+        color: #000fbc;
+    }
+
     /*listen over menu ting*/
     .main-navigation .main-menu > li > a {
         margin-right: 4.5rem;
