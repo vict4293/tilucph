@@ -11,6 +11,9 @@
 
 get_header();
 ?>
+
+
+
 <div class="tilbage_knap">
     <button class="tilbage_kollektion"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
 </div>
