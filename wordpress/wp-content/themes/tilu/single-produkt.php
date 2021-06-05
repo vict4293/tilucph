@@ -16,7 +16,9 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <section id="singleProdukt">
-            <button class=" tilbage"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
+            <div class="tilbage_knapp_container">
+                <button class=" tilbage"><img src="http://victorialoekke.dk/kea/tilbage.png"></button>
+            </div>
             <article class="indhold">
                 <div class="col1">
                     <h1 class="titel"></h1>
@@ -126,6 +128,7 @@ get_header();
 
         document.querySelector(".billede4").src = produkt.billede[3].guid;
     }
+    //foto album
     // sætter eventlistener to all the small images in col2
 
     document.querySelectorAll(".col .col2 img").forEach(img => {

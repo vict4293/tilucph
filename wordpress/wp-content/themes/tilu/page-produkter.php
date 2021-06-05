@@ -75,6 +75,7 @@ get_header();
 
         addEventListenersToButtons();
 
+
     }
 
     function addEventListenersToButtons() {
@@ -96,7 +97,9 @@ get_header();
         let container = document.querySelector("#produkt-oversigt");
         container.innerHTML = "";
         produkter.forEach(produkt => {
-            if (produkt.categories.includes(parseInt(filterProdukt))) {
+
+            if (filterProdukt == "alle" ||
+                produkt.categories.includes(parseInt(filterProdukt))) {
                 let klon = temp.cloneNode(true).content;
 
                 klon.querySelector(".titel").textContent = produkt.title.rendered;
