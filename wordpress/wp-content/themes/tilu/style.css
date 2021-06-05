@@ -2,7 +2,7 @@
 Theme name: TILU
 Template: twentynineteen
 Author: Victoria Løkke
-Version: 1.1.1
+Version: 1.1.3
 Description: Stylish Child Theme based on Twenty Nineteen
 */
 
@@ -53,6 +53,10 @@ p {
 }
 .main-navigation .main-menu > li {
 	color: black;
+}
+.main-navigation .sub-menu > li > a:hover {
+	color: white;
+	background-color: #0B28CF;
 }
 .entry-content,
 .entry .entry-content,
@@ -318,6 +322,9 @@ button.filter.kollektion {
 #singleProdukt .tilfoj {
 	width: 8rem;
 	margin-left: 4rem;
+}
+#singleProdukt .tilfoj img {
+	height: 60px;
 }
 
 /*singleprodukt slut */
