@@ -11,115 +11,137 @@ Description: Stylish Child Theme based on Twenty Nineteen
 
 																																		html,
 																																		body {
-																																			max-width: 100%;
-																																			overflow-x: hidden;
-																																			margin: 10px;
+																																		    max-width: 100%;
+																																		    overflow-x: hidden;
+																																		    margin: 10px;
 																																		}
+
 																																		/*Mobil*/
 																																		/*skrift*/
 
 																																		h1,
 																																		h2,
 																																		h3 {
-																																			font-family: ivypresto display, serif;
-																																			letter-spacing: 2px;
+																																		    font-family: ivypresto display, serif;
+																																		    letter-spacing: 2px;
 																																		}
+
 																																		p {
-																																			font-family: acumin, sans-serif;
-																																			font-size: 0.8rem;
+																																		    font-family: acumin, sans-serif;
+																																		    font-size: 0.8rem;
 																																		}
+
 																																		h1 {
-																																			font-size: 1.8rem;
+																																		    font-size: 1.8rem;
 																																		}
+
 																																		h3 {
-																																			font-size: 1.3rem;
+																																		    font-size: 1.3rem;
 																																		}
+
 																																		/*skrift slut*/
 
 																																		.site-logo {
-																																			top: 10px;
+																																		    top: 10px;
 																																		}
+
 																																		.site-header {
-																																			background-color: transparent;
+																																		    background-color: transparent;
 																																		}
+
 																																		/*styling af menu*/
 																																		/*burger menu*/
 
 																																		#rmp_menu_trigger-529 {
-																																			display: block;
+																																		    display: block;
 																																		}
+
 																																		.main-navigation {
-																																			display: none;
+																																		    display: none;
 																																		}
+
 																																		/*listen over menu ting*/
 
 																																		.main-navigation .main-menu > li > a {
-																																			margin-right: 0.5rem;
-																																			color: black;
-																																			font-weight: 400;
-																																			margin-right: 2.5rem;
-																																			font-size: 1.3rem;
-																																			margin-top: 1rem;
-																																			display: none;
+																																		    margin-right: 0.5rem;
+																																		    color: black;
+																																		    font-weight: 400;
+																																		    margin-right: 2.5rem;
+																																		    font-size: 1.3rem;
+																																		    margin-top: 1rem;
+																																		    display: none;
 																																		}
+
 																																		/*pile ned*/
 
 																																		button.submenu-expand:nth-child(2) > svg:nth-child(1) {
-																																			display: none;
+																																		    display: none;
 																																		}
+
 																																		.main-navigation .main-menu > li {
-																																			color: black;
+																																		    color: black;
 																																		}
+
 																																		.entry-content,
 																																		.entry .entry-content,
 																																		.entry .entry-summary {
-																																			padding: 0;
-																																			margin-top: 5rem;
+																																		    padding: 0;
+																																		    margin-top: 5rem;
 																																		}
+
 																																		.site-branding {
-																																			text-align: center;
+																																		    text-align: center;
 																																		}
+
 																																		#menu-item-70 > a:nth-child(1) {
-																																			display: none;
+																																		    display: none;
 																																		}
+
 																																		.site-branding {
-																																			margin: 4vw;
+																																		    margin: 4vw;
 																																		}
+
 																																		#masthead {
-																																			padding: 0;
+																																		    padding: 0;
 																																		}
+
 																																		.menu-main-container {
-																																			font-family: ivypresto display, serif;
-																																			font-size: 1rem;
+																																		    font-family: ivypresto display, serif;
+																																		    font-size: 1rem;
 																																		}
+
 																																		/*sub menu*/
 
 																																		.main-navigation .sub-menu {
-																																			background-color: white;
-																																			color: black;
-																																			list-style: none;
+																																		    background-color: white;
+																																		    color: black;
+																																		    list-style: none;
 																																		}
+
 																																		.main-navigation .sub-menu > li > a,
 																																		.main-navigation .sub-menu > li > .menu-item-link-return {
-																																			color: black;
-																																			display: block;
-																																			line-height: 1.2;
-																																			text-shadow: none;
-																																			padding: calc(.5 * 1rem) calc(24px + 1rem) calc(.5 * 1rem) 1rem;
-																																			max-width: 20rem;
-																																			font-family: ivypresto display, serif;
+																																		    color: black;
+																																		    display: block;
+																																		    line-height: 1.2;
+																																		    text-shadow: none;
+																																		    padding: calc(.5 * 1rem) calc(24px + 1rem) calc(.5 * 1rem) 1rem;
+																																		    max-width: 20rem;
+																																		    font-family: ivypresto display, serif;
 																																		}
+
 																																		/*pile ned*/
 
 																																		button.submenu-expand:nth-child(2) > svg:nth-child(1) {
-																																			color: black;
-																																			font-weight: 400;
-																																			margin-right: 2.5rem;
-																																			font-size: 1.3rem;
+																																		    color: black;
+																																		    font-weight: 400;
+																																		    margin-right: 2.5rem;
+																																		    font-size: 1.3rem;
 																																		}
+
 																																		.entry-header {
-																																			display: none;
+																																		    display: none;
 																																		}
+
 																																		/*
 #masthead {
     background-color: white;
@@ -134,87 +156,99 @@ Description: Stylish Child Theme based on Twenty Nineteen
 																																		input[type="button"],
 																																		input[type="reset"],
 																																		input[type="submit"] {
-																																			display: none;
+																																		    display: none;
 																																		}
+
 																																		button.filter {
-																																			color: black;
-																																			font-family: ivypresto display, serif;
-																																			font-size: 1rem;
-																																			font-weight: 100;
-																																			background-color: white;
-																																			/* border: solid; */
-																																			padding: 16px 9px;
-																																			text-align: left;
-																																			text-decoration: none;
-																																			display: inline-block;
-																																			cursor: pointer;
-																																			width: 9rem;
-																																			border-radius: 0;
-																																			letter-spacing: 2px;
+																																		    color: black;
+																																		    font-family: ivypresto display, serif;
+																																		    font-size: 1rem;
+																																		    font-weight: 100;
+																																		    background-color: white;
+																																		    /* border: solid; */
+																																		    padding: 16px 9px;
+																																		    text-align: left;
+																																		    text-decoration: none;
+																																		    display: inline-block;
+																																		    cursor: pointer;
+																																		    width: 9rem;
+																																		    border-radius: 0;
+																																		    letter-spacing: 2px;
 																																		}
+
 																																		button.filter.kollektion {
-																																			left: 23vw;
-																																			top: -24vh;
-																																			position: relative;
-																																			color: black;
-																																			font-family: ivypresto display, serif;
-																																			font-size: 1rem;
-																																			font-weight: 100;
-																																			font-style: italic;
-																																			background-color: white;
-																																			border: solid;
-																																			padding: 13px 5px;
-																																			text-align: center;
-																																			text-decoration: none;
-																																			display: grid;
-																																			width: 7.5rem;
-																																			height: 2.5rem;
-																																			border-radius: 0;
-																																			letter-spacing: 1px;
+																																		    left: 23vw;
+																																		    top: -24vh;
+																																		    position: relative;
+																																		    color: black;
+																																		    font-family: ivypresto display, serif;
+																																		    font-size: 1rem;
+																																		    font-weight: 100;
+																																		    font-style: italic;
+																																		    background-color: white;
+																																		    border: solid;
+																																		    padding: 13px 5px;
+																																		    text-align: center;
+																																		    text-decoration: none;
+																																		    display: grid;
+																																		    width: 7.5rem;
+																																		    height: 2.5rem;
+																																		    border-radius: 0;
+																																		    letter-spacing: 1px;
 																																		}
+
 																																		#filtrering {
-																																			display: grid;
-																																			grid-template-columns: 1fr 1fr;
-																																			grid-template-rows: 1fr 1fr 1fr 1fr;
-																																			grid-gap: 0.4rem;
-																																			/*    padding: 0px 25vw 6vw 25vw;*/
+																																		    display: grid;
+																																		    grid-template-columns: 1fr 1fr;
+																																		    grid-template-rows: 1fr 1fr 1fr 1fr;
+																																		    grid-gap: 0.4rem;
+																																		    /*    padding: 0px 25vw 6vw 25vw;*/
 																																		}
+
 																																		#filtrering_kollektion {}
+
 																																		/*filtering slut */
 																																		/*produkt side*/
 
 																																		#produkt-oversigt {
-																																			padding: 0 4vw 6vw 4vw;
-																																			margin-top: 136px;
+																																		    padding: 0 4vw 6vw 4vw;
+																																		    margin-top: 136px;
 																																		}
+
 																																		#produkt-oversigt .produkt {
-																																			position: relative;
+																																		    position: relative;
 																																		}
+
 																																		#produkt-oversigt .produkt h2 {
-																																			position: absolute;
-																																			bottom: 1rem;
-																																			left: 16px;
-																																			padding: 5px;
-																																			font-size: 1.5em;
+																																		    position: absolute;
+																																		    bottom: 1rem;
+																																		    left: 16px;
+																																		    padding: 5px;
+																																		    font-size: 1.5em;
 																																		}
+
 																																		#produkt-oversigt .produkt p {
-																																			position: absolute;
-																																			bottom: 0.2rem;
-																																			left: 16px;
-																																			padding: 5px;
+																																		    position: absolute;
+																																		    bottom: 0.2rem;
+																																		    left: 16px;
+																																		    padding: 5px;
 																																		}
+
 																																		#produkt-oversigt .produkt img {
-																																			opacity: 70%;
+																																		    opacity: 70%;
 																																		}
+
 																																		/*produktside slut */
 																																		/*single produkt */
 
 																																		#singleProdukt {
-																																			margin: 4vw;
+																																		    margin: 4vw;
 																																		}
+
 																																		#singleProdukt img {
-																																			cursor: pointer;
+																																		    cursor: pointer;
 																																		}
+
 																																		/*
 #singleProdukt .indhold {
     display: grid;
@@ -223,181 +257,214 @@ Description: Stylish Child Theme based on Twenty Nineteen
 }*/
 
 																																		#singleProdukt .box {
-																																			border-bottom: 2px solid black;
+																																		    border-bottom: 2px solid black;
 																																		}
+
 																																		#singleProdukt img {
-																																			/*    width: 80%;*/
+																																		    /*    width: 80%;*/
 																																		}
+
 																																		#singleProdukt img .billede2 {
-																																			width: 100%;
+																																		    width: 100%;
 																																		}
+
 																																		#singleProdukt h1 {
-																																			font-size: 1.7rem;
-																																			text-transform: uppercase;
-																																			padding-bottom: 5rem;
+																																		    font-size: 1.7rem;
+																																		    text-transform: uppercase;
+																																		    padding-bottom: 5rem;
 																																		}
+
 																																		.venstre {
-																																			text-align: right;
+																																		    text-align: right;
 																																		}
+
 																																		#singleProdukt .col1 {
-																																			/*
+																																		    /*
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 */
 																																		}
+
 																																		#singleProdukt .box {
-																																			/*    padding: 1rem;*/
-																																			display: grid;
-																																			grid-template-columns: 2fr 1fr;
+																																		    /*    padding: 1rem;*/
+																																		    display: grid;
+																																		    grid-template-columns: 2fr 1fr;
 																																		}
+
 																																		#singleProdukt button {
-																																			border: none;
-																																			background-color: transparent;
-																																			margin-top: 3vw;
-																																			padding: 0;
+																																		    border: none;
+																																		    background-color: transparent;
+																																		    margin-top: 3vw;
+																																		    padding: 0;
 																																		}
+
 																																		#singleProdukt .col {
-																																			/*
+																																		    /*
     display: block;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
 */
 																																		}
+
 																																		#singleProdukt .col2 {
-																																			display: grid;
-																																			grid-gap: 1rem;
-																																			grid-template-columns: 1fr 1fr 1fr;
-																																			grid-template-rows: 1fr;
-																																			/*    padding-top: 1rem;*/
+																																		    display: grid;
+																																		    grid-gap: 1rem;
+																																		    grid-template-columns: 1fr 1fr 1fr;
+																																		    grid-template-rows: 1fr;
+																																		    /*    padding-top: 1rem;*/
 																																		}
+
 																																		#singleProdukt .col3_container {
-																																			/*
+																																		    /*
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 */
-																																			margin-bottom: 2rem;
+																																		    margin-bottom: 2rem;
 																																		}
+
 																																		#singleProdukt .col3 {
-																																			display: block;
-																																			grid-column: 3;
+																																		    display: block;
+																																		    grid-column: 3;
 																																		}
+
 																																		#singleProdukt .box_container {
-																																			width: 84vw;
-																																			margin-bottom: 2rem;
+																																		    width: 84vw;
+																																		    margin-bottom: 2rem;
 																																		}
+
 																																		.tilbage_knapp_container {
-																																			display: grid;
-																																			grid-template-columns: 6fr 1fr;
+																																		    display: grid;
+																																		    grid-template-columns: 6fr 1fr;
 																																		}
+
 																																		#singleProdukt .tilbage {
-																																			grid-column: 7;
-																																			width: 2rem;
-																																			text-align: right;
+																																		    grid-column: 7;
+																																		    width: 2rem;
+																																		    text-align: right;
 																																		}
+
 																																		#singleProdukt .tilfoj {
-																																			margin-left: 6rem;
+																																		    margin-left: 6rem;
 																																		}
+
 																																		#singleProdukt .tilfoj img {
-																																			width: 8rem;
-																																			height: 2.5rem;
+																																		    width: 8rem;
+																																		    height: 2.5rem;
 																																		}
+
 																																		/*singleprodukt slut */
 																																		/*tilbage*/
 																																		/*tilbage_knap er inden for kollektion siden*/
 
 																																		.tilbage_knap {
-																																			position: absolute;
-																																			left: 2vw;
-																																			top: 25vh;
+																																		    position: absolute;
+																																		    left: 2vw;
+																																		    top: 25vh;
 																																		}
+
 																																		.tilbage {
-																																			padding 6px;
+																																		    padding 6px;
 																																		}
+
 																																		.tilbage_kollektion {
-																																			width: 4rem;
-																																			background-color: transparent;
-																																			display: none;
+																																		    width: 4rem;
+																																		    background-color: transparent;
+																																		    display: none;
 																																		}
+
 																																		#singleProdukt button {
-																																			border: none;
-																																			background-color: transparent;
-																																			margin-top: 3vw;
-																																			padding: 0;
-																																			margin-left: 10rem;
+																																		    border: none;
+																																		    background-color: transparent;
+																																		    margin-top: 3vw;
+																																		    padding: 0;
+																																		    margin-left: 10rem;
 																																		}
+
 																																		/*footer */
 
 																																		#footer-wrapper .col1 {
-																																			text-align: left;
+																																		    text-align: left;
 																																		}
+
 																																		#footer-wrapper h3 {
-																																			font-size: 1rem;
-																																			font-weight: 400;
-																																			margin-bottom: 0;
+																																		    font-size: 1rem;
+																																		    font-weight: 400;
+																																		    margin-bottom: 0;
 																																		}
+
 																																		#footer-wrapper p {
-																																			font-size: 0.8rem;
-																																			margin-top: 0;
-																																			font-style: italic;
+																																		    font-size: 0.8rem;
+																																		    margin-top: 0;
+																																		    font-style: italic;
 																																		}
+
 																																		#footer-wrapper form {
-																																			margin-left: auto;
-																																			margin-right: auto;
-																																			overflow: hidden;
+																																		    margin-left: auto;
+																																		    margin-right: auto;
+																																		    overflow: hidden;
 																																		}
+
 																																		#footer-wrapper label {
-																																			font-family: acumin, sans-serif;
-																																			text-align: left;
-																																			font-size: 0.7rem;
-																																			display: block;
-																																			margin-bottom: -2.5rem;
+																																		    font-family: acumin, sans-serif;
+																																		    text-align: left;
+																																		    font-size: 0.7rem;
+																																		    display: block;
+																																		    margin-bottom: -2.5rem;
 																																		}
+
 																																		#footer-wrapper button {
-																																			border: 1px solid black;
-																																			background-color: white;
-																																			color: black;
-																																			font-family: ivypresto display, serif;
-																																			font-weight: 400;
-																																			font-size: 15px;
-																																			padding: 5px 10px 5px 10px;
-																																			width: 100px;
+																																		    border: 1px solid black;
+																																		    background-color: white;
+																																		    color: black;
+																																		    font-family: ivypresto display, serif;
+																																		    font-weight: 400;
+																																		    font-size: 15px;
+																																		    padding: 5px 10px 5px 10px;
+																																		    width: 100px;
 																																		}
+
 																																		#footer-wrapper input {
-																																			border-bottom: 1px solid black;
-																																			width: 60%;
-																																			border-left: none;
-																																			border-right: none;
-																																			border-top: none;
-																																			background-color: transparent;
+																																		    border-bottom: 1px solid black;
+																																		    width: 60%;
+																																		    border-left: none;
+																																		    border-right: none;
+																																		    border-top: none;
+																																		    background-color: transparent;
 																																		}
+
 																																		#footer-wrapper .col2 {
-																																			text-align: right;
-																																			margin: 0.8rem 0;
+																																		    text-align: right;
+																																		    margin: 0.8rem 0;
 																																		}
+
 																																		#footer-wrapper a:link {
-																																			color: black;
-																																			font-size: 0.8rem;
+																																		    color: black;
+																																		    font-size: 0.8rem;
 																																		}
+
 																																		#footer-wrapper a:visited {
-																																			color: #1100D8;
-																																			font-size: 0.8rem;
+																																		    color: #1100D8;
+																																		    font-size: 0.8rem;
 																																		}
+
 																																		#footer-wrapper {
-																																			display: grid;
-																																			grid-template-columns: 1fr;
-																																			background-color: white;
+																																		    display: grid;
+																																		    grid-template-columns: 1fr;
+																																		    background-color: white;
 																																		}
+
 																																		/*footer slut*/
 																																		/*om tilu siden*/
 
 																																		.entry-content,
 																																		.entry .entry-content,
 																																		.entry .entry-summary {
-																																			margin-top: 0;
+																																		    margin-top: 0;
 																																		}
+
 																																		/*
 ipad
 @media screen and (min-width: 600px) and (max-width: 1000px) {
@@ -411,280 +478,337 @@ ipad
 																																		/*Desktop*/
 
 																																		@media only screen and (min-width: 600px) {
-																																			html,
-																																			body {
-																																				margin: 0px;
-																																			}
-																																			h2::before {
-																																				display: none;
-																																			}
-																																			.site-logo {
-																																				left: 0;
-																																			}
-																																			.site-header {
-																																				background-color: white;
-																																			}
-																																			/*styling af menu */
-																																			/*    burger menu*/
-																																			#rmp_menu_trigger-529 {
-																																				display: none;
-																																			}
-																																			.has-text-align-left {
-																																				text-align: justify;
-																																			}
-																																			.site-header {
-																																				height: 6rem;
-																																			}
-																																			.main-navigation {
-																																				margin-top: -2rem;
-																																			}
-																																			/*    events*/
-																																			#menu-item-32 > a:nth-child(1) {
-																																				margin-right: 4.5rem;
-																																				color: black;
-																																				font-weight: 400;
-																																				font-size: 1.3rem;
-																																			}
-																																			#menu-item-32 > a:nth-child(1):hover {
-																																				color: #000fbc;
-																																			}
-																																			#menu-item-18 > a:nth-child(1) {
-																																				color: black;
-																																				font-weight: 400;
-																																				font-size: 1.3rem;
-																																			}
-																																			#menu-item-18 > a:nth-child(1):hover {
-																																				color: #000fbc;
-																																			}
-																																			.main-navigation .main-menu > li.menu-item-has-children > a:hover {
-																																				color: #000fbc;
-																																			}
-																																			/*om tilu*/
-																																			#menu-item-306 > a:nth-child(1):hover {
-																																				color: #000fbc;
-																																			}
-																																			/*listen over menu ting*/
-																																			.main-navigation .main-menu > li > a {
-																																				margin-right: 4.5rem;
-																																				display: inline-block;
-																																			}
-																																			/*pile ned*/
-																																			button.submenu-expand:nth-child(2) > svg:nth-child(1) {
-																																				margin-right: 4.5rem;
-																																				display: block;
-																																			}
-																																			/*    sub menu */
-																																			.main-navigation .sub-menu > li > a:hover {
-																																				color: white;
-																																				background-color: #000fbc;
-																																			}
-																																			/*filtering */
-																																			.button,
-																																			button,
-																																			input[type="button"],
-																																			input[type="reset"],
-																																			input[type="submit"] {
-																																				display: none;
-																																			}
-																																			button.filter {
-																																				color: black;
-																																				font-family: ivypresto display, serif;
-																																				font-size: 1rem;
-																																				font-weight: 100;
-																																				background-color: transparent;
-																																				/* border: solid; */
-																																				padding: 16px 9px;
-																																				text-align: left;
-																																				text-decoration: none;
-																																				display: inline-block;
-																																				cursor: pointer;
-																																				width: 9rem;
-																																				border-radius: 0;
-																																				letter-spacing: 2px;
-																																			}
-																																			button.filter:hover {
-																																				color: #000fbc
-																																			}
-																																			button.filter.kollektion {
-																																				left: -20.8vw;
-																																				top: 23vh;
-																																				font-size: 1rem;
-																																				background-color: white;
-																																				padding: 19px 22px;
-																																				cursor: pointer;
-																																				width: 9rem;
-																																				height: 3rem;
-																																				letter-spacing: 2px;
-																																			}
-																																			#filtrering {
-																																				display: grid;
-																																				grid-template-columns: 1fr 1fr 1fr 1fr;
-																																				grid-template-rows: 1fr 1fr;
-																																				grid-gap: 0.4rem;
-																																				padding: 0px 25vw 6vw 25vw;
-																																			}
-																																			#filtrering_kollektion {
-																																				display: grid;
-																																				grid-template-columns: 4fr 7% 4fr 0%;
-																																				grid-template-rows: 1fr 1fr;
-																																				row-gap: 3rem;
-																																				padding: 0px 20vw 2vw 20vw;
-																																			}
-																																			/*filtering slut */
-																																			/*tilbage */
-																																			.tilbage_knap {
-																																				position: absolute;
-																																				left: 2vw;
-																																				top: 20vh;
-																																			}
-																																			.tilbage_kollektion {
-																																				width: 5rem;
-																																				background-color: white;
-																																			}
-																																			#filtrering_kollektion img {
-																																				width: auto;
-																																			}
-																																			.button {
-																																				padding: 0;
-																																			}
-																																			/*produkt side*/
-																																			#produkt-oversigt {
-																																				display: grid;
-																																				grid-template-columns: 1fr 1fr 1fr 1fr;
-																																				grid-gap: 20px;
-																																				padding: 0 4vw 6vw 4vw;
-																																				margin-top: 80px;
-																																			}
-																																			#produkt-oversigt .produkt {
-																																				position: relative;
-																																			}
-																																			#produkt-oversigt .produkt h2 {
-																																				position: absolute;
-																																				bottom: 1rem;
-																																				left: 16px;
-																																				padding: 5px;
-																																				font-size: 1.5em;
-																																			}
-																																			#produkt-oversigt .produkt p {
-																																				position: absolute;
-																																				bottom: -0.1rem;
-																																				left: 16px;
-																																				padding: 5px;
-																																			}
-																																			#produkt-oversigt .produkt img {
-																																				opacity: 70%;
-																																			}
-																																			/*produktside slut */
-																																			/*single produkt */
-																																			#singleProdukt {
-																																				margin: 4vw;
-																																			}
-																																			#singleProdukt img {
-																																				cursor: pointer;
-																																			}
-																																			#singleProdukt .indhold {
-																																				display: grid;
-																																				grid-template-columns: 2fr 1fr;
-																																				grid-gap: 8vw;
-																																			}
-																																			#singleProdukt .box {
-																																				border-bottom: 2px solid black;
-																																			}
-																																			#singleProdukt img {
-																																				/*    width: 80%;*/
-																																			}
-																																			#singleProdukt img .billede2 {
-																																				width: 100%;
-																																			}
-																																			#singleProdukt h1 {
-																																				font-size: 2.4rem;
-																																				text-transform: uppercase;
-																																				padding-bottom: 5rem;
-																																			}
-																																			#singleProdukt p {
-																																				font-family: ivypresto display, serif;
-																																			}
-																																			.venstre {
-																																				text-align: right;
-																																			}
-																																			#singleProdukt .col1 {
-																																				/* margin-right: 2vw; */
-																																				display: grid;
-																																				grid-template-columns: 1fr;
-																																				grid-template-rows: 1fr 1fr 1fr;
-																																			}
-																																			#singleProdukt .box {
-																																				/*    padding: 1rem;*/
-																																				display: grid;
-																																				grid-template-columns: 2fr 1fr;
-																																			}
-																																			#singleProdukt button {
-																																				background-color: transparent;
-																																			}
-																																			#singleProdukt .col {
-																																				display: block;
-																																				grid-template-columns: 1fr;
-																																				grid-template-rows: 2fr 1fr;
-																																			}
-																																			#singleProdukt .col2 {
-																																				display: grid;
-																																				grid-gap: 1rem;
-																																				grid-template-columns: 1fr 1fr 1fr;
-																																				grid-template-rows: 1fr;
-																																				/*    padding-top: 1rem;*/
-																																			}
-																																			#singleProdukt .col3_container {
-																																				display: grid;
-																																				grid-gap: 1rem;
-																																				grid-template-columns: 1fr 1fr 1fr;
-																																				grid-template-rows: 1fr;
-																																				/*     padding-top: 1rem;*/
-																																			}
-																																			#singleProdukt .col3 {
-																																				display: flex;
-																																				grid-column: 3;
-																																			}
-																																			.tilbage_knapp_container {
-																																				display: grid;
-																																				grid-template-columns: 1fr 6fr;
-																																			}
-																																			#singleProdukt .tilbage {
-																																				grid-column: 1;
-																																				width: 3rem;
-																																				text-align: left;
-																																				margin: 5px;
-																																			}
-																																			#singleProdukt .box_container {
-																																				width: auto;
-																																			}
-																																			#singleProdukt .tilfoj {
-																																				width: 10rem;
-																																				margin-left: 11rem
-																																			}
-																																			#footer-wrapper {
-																																				position: relative;
-																																				display: grid;
-																																				grid-template-columns: 1fr 1fr;
-																																				padding: 2vw 4vw 2vw 4vw;
-																																				background-color: white;
-																																			}
+
+																																		    html,
+																																		    body {
+																																		        margin: 0px;
+																																		    }
+
+																																		    h2::before {
+																																		        display: none;
+																																		    }
+
+																																		    .site-logo {
+																																		        left: 0;
+																																		    }
+
+																																		    .site-header {
+																																		        background-color: white;
+																																		    }
+
+																																		    /*styling af menu */
+																																		    /*    burger menu*/
+																																		    #rmp_menu_trigger-529 {
+																																		        display: none;
+																																		    }
+
+																																		    .has-text-align-left {
+																																		        text-align: justify;
+																																		    }
+
+																																		    .site-header {
+																																		        height: 6rem;
+																																		    }
+
+																																		    .main-navigation {
+																																		        margin-top: -2rem;
+																																		    }
+
+																																		    /*    events*/
+																																		    #menu-item-32 > a:nth-child(1) {
+																																		        margin-right: 4.5rem;
+																																		        color: black;
+																																		        font-weight: 400;
+																																		        font-size: 1.3rem;
+																																		    }
+
+																																		    #menu-item-32 > a:nth-child(1):hover {
+																																		        color: #000fbc;
+																																		    }
+
+																																		    #menu-item-18 > a:nth-child(1) {
+																																		        color: black;
+																																		        font-weight: 400;
+																																		        font-size: 1.3rem;
+																																		    }
+
+																																		    #menu-item-18 > a:nth-child(1):hover {
+																																		        color: #000fbc;
+																																		    }
+
+																																		    .main-navigation .main-menu > li.menu-item-has-children > a:hover {
+																																		        color: #000fbc;
+																																		    }
+
+																																		    /*om tilu*/
+																																		    #menu-item-306 > a:nth-child(1):hover {
+																																		        color: #000fbc;
+																																		    }
+
+																																		    /*listen over menu ting*/
+																																		    .main-navigation .main-menu > li > a {
+																																		        margin-right: 4.5rem;
+																																		        display: inline-block;
+																																		    }
+
+																																		    /*pile ned*/
+																																		    button.submenu-expand:nth-child(2) > svg:nth-child(1) {
+																																		        margin-right: 4.5rem;
+																																		        display: block;
+																																		    }
+
+																																		    /*    sub menu */
+																																		    .main-navigation .sub-menu > li > a:hover {
+																																		        color: white;
+																																		        background-color: #000fbc;
+																																		    }
+
+																																		    /*filtering */
+																																		    .button,
+																																		    button,
+																																		    input[type="button"],
+																																		    input[type="reset"],
+																																		    input[type="submit"] {
+																																		        display: none;
+																																		    }
+
+																																		    button.filter {
+																																		        color: black;
+																																		        font-family: ivypresto display, serif;
+																																		        font-size: 1rem;
+																																		        font-weight: 100;
+																																		        background-color: transparent;
+																																		        /* border: solid; */
+																																		        padding: 16px 9px;
+																																		        text-align: left;
+																																		        text-decoration: none;
+																																		        display: inline-block;
+																																		        cursor: pointer;
+																																		        width: 9rem;
+																																		        border-radius: 0;
+																																		        letter-spacing: 2px;
+																																		    }
+
+																																		    button.filter:hover {
+																																		        color: #000fbc
+																																		    }
+
+																																		    button.filter.kollektion {
+																																		        left: -20.8vw;
+																																		        top: 23vh;
+																																		        font-size: 1rem;
+																																		        background-color: white;
+																																		        padding: 19px 22px;
+																																		        cursor: pointer;
+																																		        width: 9rem;
+																																		        height: 3rem;
+																																		        letter-spacing: 2px;
+																																		    }
+
+																																		    #filtrering {
+																																		        display: grid;
+																																		        grid-template-columns: 1fr 1fr 1fr 1fr;
+																																		        grid-template-rows: 1fr 1fr;
+																																		        grid-gap: 0.4rem;
+																																		        padding: 0px 25vw 6vw 25vw;
+																																		    }
+
+																																		    #filtrering_kollektion {
+																																		        display: grid;
+																																		        grid-template-columns: 4fr 7% 4fr 0%;
+																																		        grid-template-rows: 1fr 1fr;
+																																		        row-gap: 3rem;
+																																		        padding: 0px 20vw 2vw 20vw;
+																																		    }
+
+																																		    /*filtering slut */
+																																		    /*tilbage */
+																																		    .tilbage_knap {
+																																		        position: absolute;
+																																		        left: 2vw;
+																																		        top: 14vh;
+																																		    }
+
+																																		    .tilbage_kollektion {
+																																		        width: 5rem;
+																																		        background-color: white;
+																																		    }
+
+																																		    #filtrering_kollektion img {
+																																		        width: auto;
+																																		    }
+
+																																		    .button {
+																																		        padding: 0;
+																																		    }
+
+																																		    /*produkt side*/
+																																		    #produkt-oversigt {
+																																		        display: grid;
+																																		        grid-template-columns: 1fr 1fr 1fr 1fr;
+																																		        grid-gap: 20px;
+																																		        padding: 0 4vw 6vw 4vw;
+																																		        margin-top: 80px;
+																																		    }
+
+																																		    #produkt-oversigt .produkt {
+																																		        position: relative;
+																																		    }
+
+																																		    #produkt-oversigt .produkt h2 {
+																																		        position: absolute;
+																																		        bottom: 1rem;
+																																		        left: 16px;
+																																		        padding: 5px;
+																																		        font-size: 1.5em;
+																																		    }
+
+																																		    #produkt-oversigt .produkt p {
+																																		        position: absolute;
+																																		        bottom: -0.1rem;
+																																		        left: 16px;
+																																		        padding: 5px;
+																																		    }
+
+																																		    #produkt-oversigt .produkt img {
+																																		        opacity: 70%;
+																																		    }
+
+																																		    /*produktside slut */
+																																		    /*single produkt */
+																																		    #singleProdukt {
+																																		        margin: 4vw;
+																																		    }
+
+																																		    #singleProdukt img {
+																																		        cursor: pointer;
+																																		    }
+
+																																		    #singleProdukt .indhold {
+																																		        display: grid;
+																																		        grid-template-columns: 2fr 1fr;
+																																		        grid-gap: 8vw;
+																																		    }
+
+																																		    #singleProdukt .box {
+																																		        border-bottom: 2px solid black;
+																																		    }
+
+																																		    #singleProdukt img {
+																																		        /*    width: 80%;*/
+																																		    }
+
+																																		    #singleProdukt img .billede2 {
+																																		        width: 100%;
+																																		    }
+
+																																		    #singleProdukt h1 {
+																																		        font-size: 2.4rem;
+																																		        text-transform: uppercase;
+																																		        padding-bottom: 5rem;
+																																		    }
+
+																																		    #singleProdukt p {
+																																		        font-family: ivypresto display, serif;
+																																		    }
+
+																																		    .venstre {
+																																		        text-align: right;
+																																		    }
+
+																																		    #singleProdukt .col1 {
+																																		        /* margin-right: 2vw; */
+																																		        display: grid;
+																																		        grid-template-columns: 1fr;
+																																		        grid-template-rows: 1fr 1fr 1fr;
+																																		    }
+
+																																		    #singleProdukt .box {
+																																		        /*    padding: 1rem;*/
+																																		        display: grid;
+																																		        grid-template-columns: 2fr 1fr;
+																																		    }
+
+																																		    #singleProdukt button {
+																																		        background-color: transparent;
+																																		    }
+
+																																		    #singleProdukt .col {
+																																		        display: block;
+																																		        grid-template-columns: 1fr;
+																																		        grid-template-rows: 2fr 1fr;
+																																		    }
+
+																																		    #singleProdukt .col2 {
+																																		        display: grid;
+																																		        grid-gap: 1rem;
+																																		        grid-template-columns: 1fr 1fr 1fr;
+																																		        grid-template-rows: 1fr;
+																																		        /*    padding-top: 1rem;*/
+																																		    }
+
+																																		    #singleProdukt .col3_container {
+																																		        display: grid;
+																																		        grid-gap: 1rem;
+																																		        grid-template-columns: 1fr 1fr 1fr;
+																																		        grid-template-rows: 1fr;
+																																		        /*     padding-top: 1rem;*/
+																																		    }
+
+																																		    #singleProdukt .col3 {
+																																		        display: flex;
+																																		        grid-column: 3;
+																																		    }
+
+																																		    .tilbage_knapp_container {
+																																		        display: grid;
+																																		        grid-template-columns: 1fr 6fr;
+																																		    }
+
+																																		    #singleProdukt .tilbage {
+																																		        grid-column: 1;
+																																		        width: 3rem;
+																																		        text-align: left;
+																																		        margin: 5px;
+																																		    }
+
+																																		    #singleProdukt .box_container {
+																																		        width: auto;
+																																		    }
+
+																																		    #singleProdukt .tilfoj {
+																																		        width: 10rem;
+																																		        margin-left: 11rem
+																																		    }
+
+																																		    #footer-wrapper {
+																																		        position: relative;
+																																		        display: grid;
+																																		        grid-template-columns: 1fr 1fr;
+																																		        padding: 2vw 4vw 2vw 4vw;
+																																		        background-color: white;
+																																		    }
 																																		}
+
 																																		@media only screen and (max-width: 800px) {
-																																			.wp-block-spacer {
-																																				display: none;
-																																			}
-																																			/*    pile ned*/
-																																			#rmp-menu-wrap-529 .rmp-menu-subarrow {
-																																				color: black;
-																																				right: 234px;
-																																			}
-																																			#rmp-menu-wrap-529 .rmp-menu-item-link,
-																																			#rmp-menu-wrap-529 .rmp-submenu .rmp-menu-item-link {
-																																				color: black;
-																																			}
-																																			/*logo*/
-																																			#rmp-menu-title-529 .rmp-menu-title-image {
-																																				width: 60%;
-																																				height: 100%;
-																																			}
+																																		    .wp-block-spacer {
+																																		        display: none;
+																																		    }
+
+																																		    /*    pile ned*/
+																																		    #rmp-menu-wrap-529 .rmp-menu-subarrow {
+																																		        color: black;
+																																		        right: 234px;
+																																		    }
+
+																																		    #rmp-menu-wrap-529 .rmp-menu-item-link,
+																																		    #rmp-menu-wrap-529 .rmp-submenu .rmp-menu-item-link {
+																																		        color: black;
+																																		    }
+
+																																		    /*logo*/
+																																		    #rmp-menu-title-529 .rmp-menu-title-image {
+																																		        width: 60%;
+																																		        height: 100%;
+																																		    }
 																																		}
