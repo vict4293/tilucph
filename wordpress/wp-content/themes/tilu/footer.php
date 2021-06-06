@@ -41,6 +41,7 @@
 						<a href="https://www.instagram.com/tilucph/?hl=da">@tilucph</a>
 						<br> <a href="mailto:Info@tilucph.dk">Info@tilucph.dk</a>
 						<br> <a href="tel:+4528441900">+45 28 44 19 00</a>
+						<br> <a href="http://www.victorialoekke.dk/kea/tilu/wordpress/forsendelse-og-retur/">Forsendelse og retur</a>
 					</div>
 				</div>
 
