@@ -236,6 +236,7 @@ Description: Stylish Child Theme based on Twenty Nineteen
 
 																																		#produkt-oversigt .produkt img {
 																																		    opacity: 70%;
+																																		    cursor: pointer;
 																																		}
 
 																																		/*produktside slut */
